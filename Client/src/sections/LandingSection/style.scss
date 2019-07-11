@@ -1,0 +1,57 @@
+@import '../../styles/palette';
+.Landing {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    .Inner {
+        -webkit-box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0);
+        box-shadow: 1px 2.5px 5px 1px $shadow;
+        color: $text;
+        // border: 2px solid #F25F5C;
+        background: transparent;
+        padding: 10rem;
+        width: 50%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 55vh;
+        margin-left: 25%;
+        margin-top: 1%;
+        .icon {
+            img {
+                padding: 1rem;
+            }
+            margin: 1rem;
+            float: left;
+        }
+        .content {
+            padding: 1rem;
+            float: right;
+        }
+    }
+    .Social {
+        background: transparent;
+        background: $main;
+        margin: 4rem auto;
+        -webkit-box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0);
+        box-shadow: 1px 2.5px 5px 1px $shadow;
+        color: $text;
+        // border: 2px solid #F25F5C;
+        width: 50%;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+        a {
+            padding: 1rem;
+            color: #FFE066;
+             :hover {
+                color: #F25F5C;
+            }
+        }
+    }
+}

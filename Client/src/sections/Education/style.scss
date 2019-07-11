@@ -1,0 +1,77 @@
+@import '../../styles/palette';
+#EduSec {
+    overflow: hidden;
+    flex: 1 1 auto;
+    padding-top: 5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .sectionTitle {
+        margin-bottom: 5rem;
+    }
+    .Container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        >.Work {
+            box-shadow: 1px 2.5px 5px 1px $shadow;
+            width: 30rem;
+            margin-left: 10rem;
+            background: $main;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 10rem;
+            .itemTitle {
+                color: $text;
+                margin: auto;
+                font-size: 35px;
+                margin-bottom: 1rem;
+            }
+            >.Item {
+                flex: 1 1 auto;
+                width: 25rem;
+                margin: 1rem auto;
+                background: transparent;
+                text-align: center;
+                box-shadow: 1px 2.5px 5px 1px $shadow;
+                .Job {
+                    color: $text1;
+                    font-size: 22px;
+                }
+            }
+        }
+        >.Education {
+            box-shadow: 1px 2.5px 5px 1px $shadow;
+            // float: right;
+            // margin-right: 10rem;
+            width: 30rem;
+            background: $main;
+            margin-right: 10rem;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 10rem;
+            .itemTitle {
+                color: $text;
+                margin: auto;
+                font-size: 35px;
+                margin-bottom: 1rem;
+            }
+            .Item {
+                flex: 1 1 auto;
+                margin: 5px;
+                text-align: center;
+                background: transparent;
+                width: 25rem;
+                margin: 1rem auto;
+                background: transparent;
+                text-align: center;
+                box-shadow: 1px 2.5px 5px 1px $shadow;
+                >.Edu {
+                    color: $text1;
+                    font-size: 19px;
+                }
+            }
+        }
+    }
+}
