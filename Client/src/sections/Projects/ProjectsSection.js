@@ -3,6 +3,7 @@ import React from 'react';
 import './style.scss';
 
 const ProjectsSection = (props, context) => {
+  let isRendered = true;
 let products = [{itemName:'BlaJh', itemLang:"Java"},{itemName:'Blah'},{itemName:'Blah'},{itemName:'Blah'},{itemName:'Blah'},{itemName:'Blah'}];
 let blah = products.map( product => {
   return(
@@ -24,10 +25,21 @@ let blah = products.map( product => {
               <div className="sectionTitle">My Projects</div>
             <div className="Nav">C#</div>
             <div className="Container">
-              <div className = "Items">
+              {isRendered ? <div className = "Items">
 {blah}
             
-            </div>
+            </div>: <div className = "SelectedItem" >
+           
+            <div className="Container">
+
+              <div className="ScrollableImage">ScrollableImage?</div>
+              <div className="Title">ITEM TITLE</div>
+              <div className="Description"> Short Description </div>
+              <div className="Goal">Goals</div>
+              </div>
+              <div className="Button">Back</div>
+              <div className="GitHubLink">Just an Image</div>
+            </div>}
 </div>
        <div className="Footer">More on <a href="#">GitHub</a></div>
             </div>
