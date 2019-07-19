@@ -39,6 +39,9 @@
                     color: $text1;
                     font-size: 22px;
                 }
+                &:hover {
+                    background: $text;
+                }
             }
         }
         >.Education {
@@ -70,6 +73,9 @@
                 >.Edu {
                     color: $text1;
                     font-size: 19px;
+                }
+                &:hover {
+                    background: $text;
                 }
             }
         }

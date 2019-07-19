@@ -54,16 +54,22 @@
                     text-align: left;
                     font-size: 12px;
                     margin-bottom: 3rem;
+                    p {
+                        background: white;
+                    }
                 }
                 >.Goal {
                     background: $main;
                     height: 10%;
                     text-align: left;
                     font-size: 12px;
+                    p {
+                        background: white;
+                    }
                 }
             }
             .Button {
-                 :hover {
+                &:hover {
                     background: $text;
                 }
                 padding: .2rem;
@@ -97,18 +103,23 @@
                 background: $text;
             }
             >.Item {
-                display: flex;
+                overflow: hidden;
                 >.ItemLanguage {
                     width: 5rem;
                     height: 1.5rem;
                     background: slateblue;
                 }
                 >.ItemIcon {
-                    margin-top: 2.5rem;
+                    img {
+                        padding: 5px;
+                        width: 200px;
+                        height: 150px;
+                    }
+                    margin: 1rem auto;
                 }
                 >.ItemTitle {
                     color: $text1;
-                    // margin: auto;
+                    margin: 1rem auto;
                     align-self: flex-end;
                 }
                 width: 15rem;

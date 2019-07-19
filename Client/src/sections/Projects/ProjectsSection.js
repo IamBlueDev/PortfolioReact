@@ -2,7 +2,7 @@ import React from "react";
 
 import "./style.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import logo from '../../favicon.ico'
 import {
   faGithub,
   faStackOverflow,
@@ -65,7 +65,10 @@ class ProjectsSection extends React.Component {
               <h6>{object.lang}</h6>
             </div>
             <div className="ItemIcon">
-              <img src="../logo.svg" />
+              <img src={logo} />
+              {/* <img src="https://www.economist.com/sites/default/files/images/2015/09/blogs/economist-explains/code2.png"/> */}
+              {/* <img src="https://www.easypromosapp.com/blog/en/wp-content/uploads/random_piker_to_select_the_winner_of_your_conetst.jpg" /> */}
+
             </div>
             <div className="ItemTitle">
               <h6>{object.name}</h6>
@@ -86,7 +89,7 @@ class ProjectsSection extends React.Component {
         
         <div id="ProjSec">
           <div className="sectionTitle">My Projects</div>
-          <div className="Nav">{categories}</div>
+          {this.state.isRendered ? (<div className="Nav">{categories}</div>):(<div></div>)}
           <div className="Container">
             {this.state.isRendered ? (
               <div className="Items">{projects}</div>
@@ -97,11 +100,11 @@ class ProjectsSection extends React.Component {
                     <div className="Title">Title: {selectProject.name}</div>
                     <div className="Description">
                       {" "}
-                      Short Description
+                      <h6>  Short Description</h6>                     
                     <p>{selectProject.description}</p>
                     </div>
                     <div className="Goal">
-                      Goals
+                    <h6>Goals</h6>                      
                     <p>{selectProject.content}</p>
                     </div>
                   </div>
