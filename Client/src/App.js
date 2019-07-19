@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './styles/main.scss';
 import MainSection from './sections/main';
@@ -9,9 +9,15 @@ import ProjectsSection from './sections/Projects/ProjectsSection';
 import ChromeMagic from './compontents/ChromeMagic/ChromeMagic'
 
 
-function App() {
+// function App() {
+
+  class App extends Component {
+
+  render(){
+
   return (
     <div id='wrapper' className="theme-light">
+  
           {/* <div className="parallax">
       <div id="stars1" />
       <div id="stars2" />
@@ -39,6 +45,6 @@ function App() {
       // </div>
 
   );
-}
+}}
 
 export default App;

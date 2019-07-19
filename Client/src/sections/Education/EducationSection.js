@@ -70,7 +70,7 @@ const EducationSection = (props, context) => {
 
 
             </div>
-            <div className="Footer">Download my <a href="#">CV</a></div>
+            <div className="Footer">Download my CV</div>
             </div>
        
           </section>

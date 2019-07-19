@@ -14,6 +14,15 @@
         // background: #F25F5C;
         // border: 2px solid #F25F5C;
         box-shadow: 1px 2.5px 5px 1px $shadow;
+        .Item {
+            margin: auto;
+            padding: 2px 1rem 2px 1rem;
+            box-shadow: 1px 2.5px 5px 1px $shadow;
+            background: $main;
+        }
+         :hover {
+            background: $text;
+        }
     }
     >.Container {
         background: transparent;
@@ -54,11 +63,19 @@
                 }
             }
             .Button {
+                 :hover {
+                    background: $text;
+                }
+                padding: .2rem;
                 float: left;
+                background: $main;
+                box-shadow: 1px 2.5px 5px 1px $shadow;
             }
             .GitHubLink {
                 float: right;
                 position: relative;
+                box-shadow: 1px 2.5px 5px 1px $shadow;
+                padding: .2rem;
             }
             flex: 1 1 10rem;
             text-align: center;
@@ -75,10 +92,15 @@
             height: 100%;
             overflow-Y: scroll;
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+             :hover {
+                background: $text;
+            }
             >.Item {
+                display: flex;
                 >.ItemLanguage {
-                    width: 2.5rem;
+                    width: 5rem;
+                    height: 1.5rem;
                     background: slateblue;
                 }
                 >.ItemIcon {
@@ -86,15 +108,14 @@
                 }
                 >.ItemTitle {
                     color: $text1;
-                    margin-top: 2.5rem;
+                    // margin: auto;
+                    align-self: flex-end;
                 }
-                flex: 1 1 10rem;
-                width: 10rem;
-                margin: 5px;
+                width: 15rem;
                 text-align: center;
-                // background: #F25F5C;
-                background: $main;
-                height: 10rem;
+                margin: 5px; // background: #F25F5C;
+                background: &main;
+                height: 15rem;
                 // border: 2px solid #F25F5C;
                 box-shadow: 1px 2.5px 5px 1px $shadow;
             }

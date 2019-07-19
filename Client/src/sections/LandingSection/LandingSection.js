@@ -25,12 +25,12 @@ const LandingPage = (props, context) => {
 </div>
 <div className="Social">
 {/*  Git */}
-<a target="_blank" href="https://github.com/IamBlueDev"> <FontAwesomeIcon icon={faGithub} size="3x" /></a>
+<a  href="https://github.com/IamBlueDev"> <FontAwesomeIcon icon={faGithub} size="3x" /></a>
 {/*  StackOverflow */}
-<a target="_blank" href="https://stackoverflow.com/users/story/11466902"> <FontAwesomeIcon icon={faStackOverflow} size="3x" /></a>
+<a  href="https://stackoverflow.com/users/story/11466902"> <FontAwesomeIcon icon={faStackOverflow} size="3x" /></a>
 {/*  LinkedIn */}
 
-<a target="_blank" href="https://www.linkedin.com/in/tkb/"> <FontAwesomeIcon icon={faLinkedin} size="3x" /></a>
+<a  href="https://www.linkedin.com/in/tkb/"> <FontAwesomeIcon icon={faLinkedin} size="3x" /></a>
 
 
 </div>
