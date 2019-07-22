@@ -46,7 +46,7 @@
                     margin: auto;
                     margin-bottom: 3rem;
                     width: 90%;
-                    color: $text;
+                    color: $text1;
                 }
                 >.Description {
                     background: $main;
@@ -55,7 +55,8 @@
                     font-size: 12px;
                     margin-bottom: 3rem;
                     p {
-                        background: white;
+                        font-size: 14px;
+                        background: $main;
                     }
                 }
                 >.Goal {
@@ -64,7 +65,8 @@
                     text-align: left;
                     font-size: 12px;
                     p {
-                        background: white;
+                        font-size: 14px;
+                        background: $main;
                     }
                 }
             }
@@ -95,22 +97,39 @@
             margin: auto;
         }
         >.Items {
-            height: 100%;
-            overflow-Y: scroll;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
-             :hover {
-                background: $text;
+            @media screen and (max-width: 640px) {
+                grid-template-columns: auto auto auto;
+                // grid-template-columns: repeat(auto-fill, minmax(100px, 2fr));
+                overflow-x: hidden;
             }
+            height: 100%;
+            overflow-y: scroll;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(246px, 1fr));
             >.Item {
-                overflow: hidden;
+                @media screen and (max-width: 640px) {
+                    width: 40vw;
+                    height: 15vh;
+                }
                 >.ItemLanguage {
+                    @media screen and (max-width: 640px) {
+                        width: 10vw;
+                        height: 2vh;
+                        h6 {
+                            font-size: 10px;
+                        }
+                    }
                     width: 5rem;
                     height: 1.5rem;
                     background: slateblue;
                 }
                 >.ItemIcon {
                     img {
+                        @media screen and (max-width: 640px) {
+                            padding: 0;
+                            width: 5vh;
+                            height: 10vw;
+                        }
                         padding: 5px;
                         width: 200px;
                         height: 150px;
@@ -122,6 +141,10 @@
                     margin: 1rem auto;
                     align-self: flex-end;
                 }
+                &:hover {
+                    background: $text;
+                }
+                overflow: hidden;
                 width: 15rem;
                 text-align: center;
                 margin: 5px; // background: #F25F5C;

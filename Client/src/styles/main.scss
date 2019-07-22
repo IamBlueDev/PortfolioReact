@@ -8,6 +8,12 @@ body,
 
 #wrapper {
     scroll-behavior: smooth;
+    @media screen and (max-width: 640px) {
+        overflow-y: scroll;
+        scroll-snap-type: none;
+        scroll-snap-points-y: none;
+        scroll-snap-type: y none;
+    }
     overflow-y: scroll;
     scroll-snap-type: proximity;
     scroll-snap-points-y: repeat(100vh);
@@ -63,6 +69,9 @@ section {
     // border-bottom: 1px solid red;
     height: 100%;
     .sectionTitle {
+        @media screen and (max-width: 640px) {
+            width: 75vw;
+        }
         z-index: 5;
         margin: auto;
         // margin: 2rem 0 4rem 0;
@@ -75,6 +84,10 @@ section {
         box-shadow: 1px 2.5px 5px 1px $shadow;
     }
     .Footer {
+        @media screen and (max-width: 640px) {
+            margin: auto;
+            margin-bottom: 1rem;
+        }
         margin: auto;
         background: $main;
         width: 10rem;

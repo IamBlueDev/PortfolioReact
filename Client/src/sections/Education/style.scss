@@ -10,11 +10,21 @@
         margin-bottom: 5rem;
     }
     .Container {
+        @media screen and (max-width: 640px) {
+            flex-direction: column;
+            overflow-y: scroll;
+        }
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         >.Work {
+            @media screen and (max-width: 640px) {
+                margin: auto;
+                margin-top: 5rem;
+                margin-bottom: 5rem;
+                width: 80vw;
+            }
             box-shadow: 1px 2.5px 5px 1px $shadow;
             width: 30rem;
             margin-left: 10rem;
@@ -29,6 +39,9 @@
                 margin-bottom: 1rem;
             }
             >.Item {
+                @media screen and (max-width: 640px) {
+                    width: 60vw;
+                }
                 flex: 1 1 auto;
                 width: 25rem;
                 margin: 1rem auto;
@@ -45,6 +58,13 @@
             }
         }
         >.Education {
+            @media screen and (max-width: 640px) {
+                margin: auto;
+                margin-top: 5rem;
+                margin-bottom: 5rem;
+                width: 80vw;
+                padding-bottom: 2rem;
+            }
             box-shadow: 1px 2.5px 5px 1px $shadow;
             // float: right;
             // margin-right: 10rem;
@@ -61,6 +81,9 @@
                 margin-bottom: 1rem;
             }
             .Item {
+                @media screen and (max-width: 640px) {
+                    width: 60vw;
+                }
                 flex: 1 1 auto;
                 margin: 5px;
                 text-align: center;

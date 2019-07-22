@@ -8,15 +8,17 @@ import {
   faStackOverflow,
   faLinkedin
 } from "@fortawesome/free-brands-svg-icons";
-
+const ReactMarkdown = require('react-markdown')
+const breaks = require('remark-breaks')
 class ProjectsSection extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
       isRendered: true,
       projects: [],
       selectedProject: [],
-      cats: ["All","React", "Java","Python","C#"],
+      cats: ["All", "React", "Java", "Python", "C#"],
       displayedCat: "All"
     };
   }
@@ -29,8 +31,9 @@ class ProjectsSection extends React.Component {
   };
 
   handleProjectSelect = async args => {
+
+
     this.setState({ isRendered: false, selectedProject: args });
-    console.log(args);
     console.log("lano");
   };
 
@@ -44,11 +47,10 @@ class ProjectsSection extends React.Component {
       })
       .catch(err => console.log(err));
   };
-  setCategory = (cat)=>{
-    this.setState({displayedCat:cat});
+  setCategory = (cat) => {
+    this.setState({ displayedCat: cat });
   }
   render() {
-
     const projects = this.state.projects
       .filter(
         ({ lang }) =>
@@ -77,19 +79,20 @@ class ProjectsSection extends React.Component {
         );
       });
 
-      const categories = this.state.cats.map(cat =>{
-        return(
+    const categories = this.state.cats.map(cat => {
+      return (
         <div className="Item" onClick={this.setCategory.bind(this, cat)}>{cat}</div>
-      )})
+      )
+    })
 
     const GitHubLink = "https://github.com/IamBlueDev";
     const selectProject = this.state.selectedProject;
     return (
       <section>
-        
+
         <div id="ProjSec">
           <div className="sectionTitle">My Projects</div>
-          {this.state.isRendered ? (<div className="Nav">{categories}</div>):(<div></div>)}
+          {this.state.isRendered ? (<div className="Nav">{categories}</div>) : (<div></div>)}
           <div className="Container">
             {this.state.isRendered ? (
               <div className="Items">{projects}</div>
@@ -97,15 +100,17 @@ class ProjectsSection extends React.Component {
                 <div className="SelectedItem">
                   <div className="Container">
                     <div className="ScrollableImage">ScrollableImage?</div>
-                    <div className="Title">Title: {selectProject.name}</div>
+                    <div className="Title"><h6>{selectProject.name}</h6></div>
                     <div className="Description">
                       {" "}
-                      <h6>  Short Description</h6>                     
-                    <p>{selectProject.description}</p>
+                      <h6>  Short Description</h6>
+                      {<ReactMarkdown source={selectProject.description} escapeHtml={true} /> }
                     </div>
                     <div className="Goal">
-                    <h6>Goals</h6>                      
-                    <p>{selectProject.content}</p>
+                      <h6>Goals</h6>
+
+
+                      {<ReactMarkdown plugins={[breaks]} source={selectProject.content} />}
                     </div>
                   </div>
                   {/* <button  onClick={this.GetOut}>Back </button>  */}

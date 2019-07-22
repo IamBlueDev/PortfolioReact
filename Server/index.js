@@ -23,17 +23,7 @@ app.get('/api/p', (req, res) => {
         res.status(200).send({ data: data, msg: "Cars retrieved" })
       }).catch( err => next(err))
       
-    // Project.findAll().then(users => {} res.json(users))
-//    test = Project.findAll().then(users =>  res.json(users)
-//     //     {
-//     //     // let result = res.json(users)
-//     //     let result = res.json(users)
-//     //     // console.log(res.json(users));
-//     //     // console.log(JSON.stringify(result));
 
-//     // }
-//         )
-//         // console.log(test)
 })
 
 const port = 3001

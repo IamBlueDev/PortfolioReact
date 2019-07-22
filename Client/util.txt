@@ -1,0 +1,13 @@
+  *  Minimalist Portfolio 
+  * basic server API to help for future improvements.
+  * Quick overview on Work and Education experience
+
+I achieved the first goal by using my previous designs for portfolios that were made in other frameworks and gaining inspiration from them. I ended up with a card like setup where everything is in front of the user and they can explore the website simply using the scroll wheel
+
+The second goal i had set myself was the hardest to achieve as this is where I had to do the most research, I wanted to have an easy to setup API that would allow me to access and receive data in the form of models. The reason I wanted a model format for the data as this is the easiest way to insure the code doesn't break in the future updates.
+
+And finally the last goal was to allow the user to glance over my experience quickly, I achieved this by having my work experience and education experience in a section together, one on the left and the other on the right. 
+
+Overall I am very satisfied with this project as it allowed me to learn a lot about how react works and improved my backend skills also.
+###
+
