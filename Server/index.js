@@ -20,7 +20,7 @@ app.use((req,res,next)=>{
 // API ENDPOINTS
 app.get('/api/p', (req, res) => {
     Project.findAll().then( (data) => {
-        res.status(200).send({ data: data, msg: "Cars retrieved" })
+        res.status(200).send({ data: data, msg: "projects retrieved" })
       }).catch( err => next(err))
       
 
