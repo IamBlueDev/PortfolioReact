@@ -7,7 +7,7 @@ class ChromeMagic extends React.Component{
 // export default ChromeMagic = (props) => {
     render(){
         return (
-            <div class='parallax'>
+            <div className='parallax'>
 <div id='stars1'></div>
 <div id='stars2'></div>
 <div id='stars3'></div>
