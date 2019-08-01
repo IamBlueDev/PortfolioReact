@@ -9,5 +9,8 @@ module.exports = (sequelize, type) => {
         description:type.STRING,
         content: type.TEXT,
         lang:type.STRING,
+        status:type.STRING,
+        link:type.STRING,
+        
     })
 }
