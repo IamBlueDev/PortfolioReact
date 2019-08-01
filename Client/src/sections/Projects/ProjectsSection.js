@@ -38,7 +38,7 @@ class ProjectsSection extends React.Component {
   };
 
   getMyData = async () => {
-    fetch("http://localhost:3001/api/p")
+    fetch("http://165.22.122.130:3001/api/p")
       .then(res => {
         return res.json();
       })
@@ -66,6 +66,11 @@ class ProjectsSection extends React.Component {
               {" "}
               <h6>{object.lang}</h6>
             </div>
+            <div className="ItemStatus">
+              {" "}
+              <h6>{object.status}</h6>
+            </div>
+
             <div className="ItemIcon">
               <img src={logo} />
               {/* <img src="https://www.economist.com/sites/default/files/images/2015/09/blogs/economist-explains/code2.png"/> */}
@@ -98,6 +103,9 @@ class ProjectsSection extends React.Component {
               <div className="Items">{projects}</div>
             ) : (
                 <div className="SelectedItem">
+                  <div className="ItemStatus">
+              <h6>{selectProject.status}</h6>
+            </div>
                   <div className="Container">
                     <div className="ScrollableImage">ScrollableImage?</div>
                     <div className="Title"><h6>{selectProject.name}</h6></div>
@@ -118,7 +126,7 @@ class ProjectsSection extends React.Component {
                     Back
                 </div>
                   <div className="GitHubLink">
-                    <a href={GitHubLink}>
+                    <a href={GitHubLink+"/"+selectProject.link}>
                       <FontAwesomeIcon icon={faGithub} />
                     </a>
                   </div>
