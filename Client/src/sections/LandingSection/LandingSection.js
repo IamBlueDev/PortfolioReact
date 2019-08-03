@@ -15,7 +15,7 @@ const LandingPage = (props, context) => {
       <div className="Landing">
         <div className="Inner">
         <div className="Icon"> 
-          <img src="./favicon.ico"/>
+          <img src="./favicon.png"/>
         </div>
         <div className="content"> 
         <h1>Hello, I am Tanweer</h1>

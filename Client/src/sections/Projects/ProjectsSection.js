@@ -2,7 +2,7 @@ import React from "react";
 
 import "./style.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import logo from '../../favicon.ico'
+import logo from '../../placeholders/pPlaceholder.png'
 import {
   faGithub,
   faStackOverflow,
