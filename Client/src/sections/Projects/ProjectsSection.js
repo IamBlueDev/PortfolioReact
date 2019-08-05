@@ -35,7 +35,7 @@ class ProjectsSection extends React.Component {
 
     this.setState({ isRendered: false, selectedProject: args });
     console.log("lano");
-  };
+  };n
 
   getMyData = async () => {
     fetch("http://165.22.122.130:3001/api/p")
@@ -59,27 +59,45 @@ class ProjectsSection extends React.Component {
       .map(object => {
         return (
           <div
-            className="Item"
-            onClick={this.handleProjectSelect.bind(this, object)}
+            className="Item "
           >
-            <div className="ItemLanguage">
-              {" "}
+
+            <div class="ribbon"><span>{object.status}</span></div>
+             <div className="ItemIcon"
+            onClick={this.handleProjectSelect.bind(this, object)}
+            co
+            >
+              <img src={logo} />
+              </div>
+              <div className="ItemTitle">
+              <h6>{object.name}</h6> 
+            </div>
+              <div className="Quick_Links">Quick Info</div>
+              <div className="QuickInfo_Content">
+                <div className="Langs"></div>
+                <div className="Links"></div>
+              </div>
+            {/* <div className=" ribbion ribbion-top-left">
               <h6>{object.lang}</h6>
             </div>
-            <div className="ItemStatus">
+            <div className="ItemStatus ribbon ribbon-top-right" >
               {" "}
-              <h6>{object.status}</h6>
+              <span>{object.status}</span>
             </div>
-
-            <div className="ItemIcon">
+            {/* <div class="ribbon ribbon-top-left"><span>ribbon</span></div> */}
+          {/* 
+            <div className="ItemIcon"
+            onClick={this.handleProjectSelect.bind(this, object)}
+            co
+            >
               <img src={logo} />
               {/* <img src="https://www.economist.com/sites/default/files/images/2015/09/blogs/economist-explains/code2.png"/> */}
               {/* <img src="https://www.easypromosapp.com/blog/en/wp-content/uploads/random_piker_to_select_the_winner_of_your_conetst.jpg" /> */}
+            {/* </div> 
 
-            </div>
             <div className="ItemTitle">
-              <h6>{object.name}</h6>
-            </div>
+              <h6>{object.name}</h6> 
+            </div>*/}
           </div>
         );
       });
@@ -125,6 +143,7 @@ class ProjectsSection extends React.Component {
                   <div className="Button" onClick={this.GetOut}>
                     Back
                 </div>
+                
                   <div className="GitHubLink">
                     <a href={GitHubLink+"/"+selectProject.link}>
                       <FontAwesomeIcon icon={faGithub} />

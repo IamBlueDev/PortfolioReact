@@ -11,8 +11,8 @@
         padding: 1rem;
         margin: 1rem auto;
         background: $main;
-        // background: #F25F5C;
-        // border: 2px solid #F25F5C;
+        background: #F25F5C;
+        border: 2px solid #F25F5C;
         box-shadow: 1px 2.5px 5px 1px $shadow;
         .Item {
             margin: auto;
@@ -111,9 +111,9 @@
             }
             height: 100%;
             overflow-y: scroll;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(246px, 1fr));
-            >.Item {
+            display: flex;
+            // grid-template-columns: repeat(auto-fill, minmax(246px, 1fr));
+            >.Item2 {
                 @media screen and (max-width: 640px) {
                     width: 40vw;
                     height: 15vh;
@@ -144,6 +144,7 @@
                             width: 5vh;
                             height: 10vw;
                         }
+                        cursor: pointer;
                         padding: 5px;
                         width: 200px;
                         height: 150px;
@@ -167,6 +168,99 @@
                 // border: 2px solid #F25F5C;
                 box-shadow: 1px 2.5px 5px 1px $shadow;
             }
+            >.Item {
+                display: flex;
+                flex-direction: column;
+                >.ItemLanguage {}
+                >.ItemStatus {
+                    position: relative;
+                    max-width: 600px;
+                    width: 90%;
+                    height: 400px;
+                }
+                >.ItemIcon {
+                    cursor: pointer;
+                    img {
+                        padding: 5px;
+                        width: 200px;
+                        height: 150px;
+                    }
+                    margin: 1rem auto;
+                }
+                >.ItemTitle {}
+                &:hover {}
+                // overflow: hidden;
+                width: 15rem;
+                text-align: center;
+                margin: 5px; // background: #F25F5C;
+                background: &main;
+                height: 15rem;
+                position: relative;
+                // border: 2px solid #F25F5C;
+                box-shadow: 1px 2.5px 5px 1px $shadow;
+            }
         }
     }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:700);
+// body {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     min-height: 100vh;
+//     background: #f0f0f0;
+// }
+.ribbon {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 75px;
+    height: 75px;
+    text-align: right;
+}
+
+.ribbon span {
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 20px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    width: 100px;
+    display: block;
+    background: #79A70A;
+    background: linear-gradient(#9BC90D 0%, #79A70A 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 19px;
+    right: -21px;
+}
+
+.ribbon span::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    z-index: -1;
+    border-left: 3px solid #79A70A;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #79A70A;
+}
+
+.ribbon span::after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid #79A70A;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #79A70A;
 }
