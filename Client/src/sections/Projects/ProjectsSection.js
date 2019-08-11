@@ -6,8 +6,13 @@ import logo from '../../placeholders/pPlaceholder.png'
 import {
   faGithub,
   faStackOverflow,
-  faLinkedin
+  faLinkedin,
+  faReact,
+  faNode,
+  faPython,
+  faJava,
 } from "@fortawesome/free-brands-svg-icons";
+import {faInfinity,faCopyright} from '@fortawesome/free-solid-svg-icons';
 const ReactMarkdown = require('react-markdown')
 const breaks = require('remark-breaks')
 class ProjectsSection extends React.Component {
@@ -18,7 +23,9 @@ class ProjectsSection extends React.Component {
       isRendered: true,
       projects: [],
       selectedProject: [],
-      cats: ["All", "React", "Java", "Python", "C#"],
+      cats: [{cat:"All",icon:faInfinity}, {cat:"React",icon:faReact}, {cat:"Java",icon:faJava}, {cat:"Python",icon:faPython}, {cat:"C#",icon:faCopyright}],
+     
+      // cats: [{cat:"All",icon:"test"}, "React", "Java", "Python", "C#"],
       displayedCat: "All"
     };
   }
@@ -38,7 +45,7 @@ class ProjectsSection extends React.Component {
   };n
 
   getMyData = async () => {
-    fetch("http://165.22.122.130:3001/api/p")
+    fetch("http://tanweerbaig.co.uk/api/p")
       .then(res => {
         return res.json();
       })
@@ -51,6 +58,7 @@ class ProjectsSection extends React.Component {
     this.setState({ displayedCat: cat });
   }
   render() {
+    const GitHubLink = "https://github.com/IamBlueDev";
     const projects = this.state.projects
       .filter(
         ({ lang }) =>
@@ -72,10 +80,12 @@ class ProjectsSection extends React.Component {
               <div className="ItemTitle">
               <h6>{object.name}</h6> 
             </div>
-              <div className="Quick_Links">Quick Info</div>
+              <div className="Quick_Links"><p>Quick Info</p></div>
               <div className="QuickInfo_Content">
-                <div className="Langs"></div>
-                <div className="Links"></div>
+                <div className="Langs"><p> <FontAwesomeIcon icon={faReact} size="3x"/></p><p><FontAwesomeIcon icon={faNode} size="3x"/></p></div>
+                <div className="Links"> <h5>Links</h5>
+                                   <a href={GitHubLink+"/"+object.link}>
+                      <FontAwesomeIcon icon={faGithub} size="3x"/> </a></div>
               </div>
             {/* <div className=" ribbion ribbion-top-left">
               <h6>{object.lang}</h6>
@@ -102,13 +112,16 @@ class ProjectsSection extends React.Component {
         );
       });
 
-    const categories = this.state.cats.map(cat => {
+    const categories = 
+    Object.keys(this.state.cats).map((cat, index) =>{
+
+    // this.state.cats.map(cat,icon => {
       return (
-        <div className="Item" onClick={this.setCategory.bind(this, cat)}>{cat}</div>
+        <div className="Item" onClick={this.setCategory.bind(this, this.state.cats[cat].cat)}><FontAwesomeIcon icon={this.state.cats[cat].icon} size="2x"/> {this.state.cats[cat].cat}</div>
       )
     })
 
-    const GitHubLink = "https://github.com/IamBlueDev";
+    // const GitHubLink = "https://github.com/IamBlueDev";
     const selectProject = this.state.selectedProject;
     return (
       <section>
@@ -125,7 +138,7 @@ class ProjectsSection extends React.Component {
               <h6>{selectProject.status}</h6>
             </div>
                   <div className="Container">
-                    <div className="ScrollableImage">ScrollableImage?</div>
+                    <div className="ScrollableImage"><img src={logo}/></div>
                     <div className="Title"><h6>{selectProject.name}</h6></div>
                     <div className="Description">
                       {" "}
