@@ -11,6 +11,7 @@ module.exports = (sequelize, type) => {
         lang:type.STRING,
         status:type.STRING,
         link:type.STRING,
+        logo:type.STRING,
         
     })
 }

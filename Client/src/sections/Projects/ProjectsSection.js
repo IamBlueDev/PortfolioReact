@@ -2,7 +2,10 @@ import React from "react";
 
 import "./style.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import logo from '../../placeholders/pPlaceholder.png'
+import logo from '../../placeholders/pPlaceholder.png';
+import shop from '../../placeholders/list.png';
+import port from '../../placeholders/port.png';
+
 import {
   faGithub,
   faStackOverflow,
@@ -45,7 +48,8 @@ class ProjectsSection extends React.Component {
   };n
 
   getMyData = async () => {
-    fetch("http://tanweerbaig.co.uk/api/p")
+    // fetch("http://tanweerbaig.co.uk/api/p")
+    fetch("http://localhost:3001/api/p")    
       .then(res => {
         return res.json();
       })
@@ -75,7 +79,8 @@ class ProjectsSection extends React.Component {
             onClick={this.handleProjectSelect.bind(this, object)}
             co
             >
-              <img src={logo} />
+              {/* {object.icon = logo} */}
+              <img src={"http://tanweerbaig.co.uk/img/"+ object.logo+".png"} />
               </div>
               <div className="ItemTitle">
               <h6>{object.name}</h6> 
