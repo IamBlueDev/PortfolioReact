@@ -21,7 +21,7 @@ app.use((req,res,next)=>{
 app.get('/api/p', (req, res) => {
     Project.findAll().then( (data) => {
         res.status(200).send({ data: data, msg: "projects retrieved" })
-      }).catch( err => next(err))
+      }).catch( err => console.log(err))
       
 
 })
