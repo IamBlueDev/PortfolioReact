@@ -45,7 +45,7 @@ const EducationSection = (props, context) => {
               </div>
 
             <div className="Item">
-                <div className="Edu">Ordinary Degree</div>
+                <div className="Edu">BSc Computer Networks</div>
                 <div className="Title">Middlesex University</div>
 
                 <div className="Time">2014-2018</div>
@@ -70,9 +70,14 @@ const EducationSection = (props, context) => {
 
 
             </div>
-            <div className="Footer">Download my CV</div>
+            <div className="Footer">Download my <a href="http://tanweerbaig.co.uk/cv" target="_blank">CV</a></div>
+            <div className='mouse-container edu'>
+            <a href="#landingSec"><div className='mouse'>
+           <span  className='scroll-up'></span>
             </div>
-       
+            </a>
+            <h6>Back to top</h6>
+            </div></div>
           </section>
 
   );

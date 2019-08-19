@@ -3,12 +3,14 @@
     display: flex;
     flex-direction: column;
     padding-top: 100px;
+    background: rgba($main, 1);
     // @media only screen and (max-width: $small-range) {
     //     background: $text;
     // }
     @media screen and (max-width: 640px) {
         padding-top: 25px;
     }
+    height: 100%;
     .Inner {
         @media screen and (max-width: 640px) {
             padding: 1rem;
@@ -22,7 +24,6 @@
                 }
                 h5 {
                     font-size: 12px;
-                    color: $text1;
                 }
             }
             .icon {
@@ -32,8 +33,11 @@
         -webkit-box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0);
         box-shadow: 1px 2.5px 5px 1px $shadow;
         color: $text;
+        h5 {
+            color: $text1;
+        }
         // border: 2px solid #F25F5C;
-        background: transparent;
+        background: rgba($main, 0.5);
         padding: 10rem;
         width: 50%;
         overflow: hidden;
@@ -61,7 +65,8 @@
         @media screen and (max-width: 640px) {
             width: 75%;
         }
-        background: $main;
+        background: rgba($main, 0.5);
+        // background: $main;
         margin: 4rem auto;
         -webkit-box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0);
         box-shadow: 1px 2.5px 5px 1px $shadow;
@@ -75,7 +80,8 @@
         padding: 1rem;
         a {
             padding: 1rem;
-            color: #FFE066;
+            color: $text1;
+            // color: #FFE066;
              :hover {
                 color: #F25F5C;
             }

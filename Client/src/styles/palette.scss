@@ -1,25 +1,30 @@
-$shadow: #A23E48;
-$highlight: #FF3C38;
-$main: #6699CC;
+// $shadow: #A23E48;
+$shadow: black;
+$highlight: rgb(190, 49, 47);
+$testcolor: rgba( #6699CC, 0.4);
+$main: rgb(233, 233, 233);
+$menuitems: #FF3C38;
 // $main: #FF8C42;
-$text: #FFF275;
+$text: black;
+// $text: #FFF275;
 $text1: #A23E48;
+$text2:#FFE066;
 // $background: #A23E48;
-$background: #6699CC;
+$background: gray;
 // breakpoints
-$small-range : (0em, 40em);
+$small-range: (0em, 40em);
 
 /* 0, 640px */
 
-$medium-range : (40.063em, 64em);
+$medium-range: (40.063em, 64em);
 
 /* 641px, 1024px */
 
-$large-range : (64.063em, 90em);
+$large-range: (64.063em, 90em);
 
 /* 1025px, 1440px */
 
-$xlarge-range : (90.063em, 120em);
+$xlarge-range: (90.063em, 120em);
 
 /* 1441px, 1920px */
 

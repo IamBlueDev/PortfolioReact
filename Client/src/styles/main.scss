@@ -60,6 +60,7 @@ body,
 }
 
 section {
+    position: relative;
     -webkit-user-select: none;
     /* Safari */
     -moz-user-select: none;
@@ -69,7 +70,7 @@ section {
     user-select: none;
     /* Standard */
     // background: linear-gradient(45deg, rgba(254, 246, 210, 0.53) 0%, rgba(254, 246, 210, 0.53) 14.286%, rgba(221, 240, 216, 0.53) 14.286%, rgba(221, 240, 216, 0.53) 28.572%, rgba(188, 233, 223, 0.53) 28.572%, rgba(188, 233, 223, 0.53) 42.858%, rgba(156, 227, 229, 0.53) 42.858%, rgba(156, 227, 229, 0.53) 57.144%, rgba(123, 220, 235, 0.53) 57.144%, rgba(123, 220, 235, 0.53) 71.42999999999999%, rgba(90, 214, 242, 0.53) 71.43%, rgba(90, 214, 242, 0.53) 85.71600000000001%, rgba(57, 207, 248, 0.53) 85.716%, rgba(57, 207, 248, 0.53) 100.002%), linear-gradient(135deg, rgb(246, 99, 200) 0%, rgb(246, 99, 200) 12.5%, rgb(223, 98, 196) 12.5%, rgb(223, 98, 196) 25%, rgb(199, 97, 192) 25%, rgb(199, 97, 192) 37.5%, rgb(176, 96, 188) 37.5%, rgb(176, 96, 188) 50%, rgb(152, 95, 184) 50%, rgb(152, 95, 184) 62.5%, rgb(129, 94, 180) 62.5%, rgb(129, 94, 180) 75%, rgb(105, 93, 176) 75%, rgb(105, 93, 176) 87.5%, rgb(82, 92, 172) 87.5%, rgb(82, 92, 172) 100%);
-    background: $background;
+    // background: $background;
     // border-bottom: 1px solid red;
     height: 100%;
     .sectionTitle {
@@ -221,5 +222,116 @@ $shadows-big: multiple-box-shadow(100);
         to {
             transform: translateY(0px);
         }
+    }
+}
+
+@-webkit-keyframes scroll-inner {
+    from {
+        margin-top: 0%;
+    }
+    to {
+        margin-top: 50%;
+    }
+}
+
+@keyframes scroll-inner {
+    from {
+        margin-top: 0;
+    }
+    to {
+        margin-top: 50%;
+    }
+}
+
+@-webkit-keyframes scroll-inner-up {
+    to {
+        margin-top: 0%;
+    }
+    from {
+        margin-top: 50%;
+    }
+}
+
+@keyframes scroll-inner-up {
+    to {
+        margin-top: 0;
+    }
+    from {
+        margin-top: 50%;
+    }
+}
+
+.mouse-container {
+    // position: absolute;
+    bottom: 5px;
+    left: 47vw;
+    &.absolute {
+        margin-top: 1rem;
+        bottom: 2rem;
+        // position: absolute;
+        color: $text1;
+        .mouse {
+            border: solid 2px grey;
+            .scroll-down {
+                background: grey;
+            }
+        }
+    }
+    &.edu {
+        bottom: 5rem;
+        margin-top: 1rem;
+        color: white;
+        .mouse {
+            border: solid 2px $main;
+            .scroll-up {
+                background: $main;
+            }
+        }
+    }
+    color: red;
+    text-align: center;
+}
+
+.mouse {
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    width: 35px;
+    height: 35px;
+    border: solid 2px $text1;
+    border-radius: 25px;
+    // -webkit-animation: scroll-mouse 1.5s;
+    // animation: scroll-mouse 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    //-webkit-animation-timing-function:ease;
+    //animation-timing-function:ease;
+    >.scroll-down {
+        display: block;
+        width: 10px;
+        height: 10px;
+        background: $highlight;
+        border-radius: 50%;
+        margin: 15% auto auto auto;
+        -webkit-animation: scroll-inner 1.5s;
+        animation: scroll-inner 1.5s;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-timing-function: ease;
+        animation-timing-function: ease
+    }
+    >.scroll-up {
+        display: block;
+        width: 10px;
+        height: 10px;
+        background: $highlight;
+        border-radius: 50%;
+        margin: 15% auto auto auto;
+        -webkit-animation: scroll-inner-up 1.5s;
+        animation: scroll-inner-up 1.5s;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-timing-function: ease;
+        animation-timing-function: ease
     }
 }

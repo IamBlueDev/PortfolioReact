@@ -84,7 +84,9 @@ class ProjectsSection extends React.Component {
               <div className="QuickInfo_Content">
                 <div className="Langs"><p> <FontAwesomeIcon icon={faReact} size="3x"/></p><p><FontAwesomeIcon icon={faNode} size="3x"/></p></div>
                 <div className="Links"> <h5>Links</h5>
-                                   <a href={GitHubLink+"/"+object.link}>
+                  <a style={{display: "table-cell"}} href={GitHubLink+"/"+object.link} target="_blank">
+                                  
+                                   {/* <a href={GitHubLink+"/"+object.link}> */}
                       <FontAwesomeIcon icon={faGithub} size="3x"/> </a></div>
               </div>
             {/* <div className=" ribbion ribbion-top-left">

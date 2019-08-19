@@ -1,5 +1,9 @@
 @import '../../styles/palette';
 #EduSec {
+    background: rgba($background, 1);
+    @media screen and (max-width: 640px) {
+        height: 200%;
+    }
     overflow: hidden;
     flex: 1 1 auto;
     padding-top: 5rem;
@@ -49,11 +53,15 @@
                 text-align: center;
                 box-shadow: 1px 2.5px 5px 1px $shadow;
                 .Job {
-                    color: $text1;
+                    color: $highlight;
                     font-size: 22px;
                 }
                 &:hover {
-                    background: $text;
+                    background: rgba($text1, 0.5);
+                    color: white;
+                    .Job {
+                        color: white;
+                    }
                 }
             }
         }
@@ -96,9 +104,15 @@
                 >.Edu {
                     color: $text1;
                     font-size: 19px;
+                    font-weight: 500;
                 }
                 &:hover {
-                    background: $text;
+                    // background: $text;
+                    background: rgba($text1, 0.5);
+                    color: white;
+                    .Edu {
+                        color: white;
+                    }
                 }
             }
         }

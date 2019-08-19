@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
 const ProjectModel = require('./models/project')
 
-const sequelize = new Sequelize('portfolio', 'tan', 'Kings1234lol', {
+const sequelize = new Sequelize('portfolio', 'root', '', {
   host: 'localhost',
   dialect: 'mysql',
   pool: {
