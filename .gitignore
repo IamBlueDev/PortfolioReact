@@ -2,6 +2,8 @@
 *.apk
 *.ap_
 
+Server/sequelize.js
+
 # Files for the Dalvik VM
 *.dex
 
