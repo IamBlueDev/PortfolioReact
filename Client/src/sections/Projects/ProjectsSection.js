@@ -168,8 +168,17 @@ class ProjectsSection extends React.Component {
               )}
           </div>
           <div className="Footer">
-            More on <a href={GitHubLink}>GitHub</a>
+            More on <a  href={GitHubLink} target="_blank">GitHub</a>
+            {/* style={{display: "table-cell"}} href={GitHubLink+"/"+object.link} target="_blank" */}
           </div>
+          <div className='mouse-container absolute'>
+  <a href="#EduSec"><div className='mouse'>
+
+      <span  className='scroll-down'></span>
+  </div>
+</a>
+<h6>Education</h6>
+</div>
         </div>
       </section>
     );
