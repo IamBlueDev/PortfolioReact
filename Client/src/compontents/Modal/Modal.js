@@ -16,17 +16,19 @@ import {
 export default class Modal extends Component{
     state =
     {
-        show : false,    
+        show : true,    
     };
 
     toggleModal = ()=>{
+        console.log(this.state.show)
         this.setState({show : !this.state.show});
     }
 
     render (){
-        if(!this.props.show){
-            return null;
-        }
+        // if(!this.props.show){
+        //     return null;
+        // }
+        // {this.state.Modal}
         return (
             
             <div className="Modal">
@@ -44,10 +46,12 @@ export default class Modal extends Component{
                 
 
                 <div className="Social">
-                    {/* github */}
-                    {/* Live project? */}
-                </div>
+                {this.props.live ?(<div><a target="_blank" href={this.props.live}><FontAwesomeIcon icon={faGithub} size="3x"/></a></div>):(<div></div>)}
+                {this.props.link ?(<div><a target="_blank" href={this.props.link}><FontAwesomeIcon icon={faGithub} size="3x"/></a></div>):(<div></div>)}
 
+
+                </div>
+                {this.props.show}
                 
             </div>
             </div>

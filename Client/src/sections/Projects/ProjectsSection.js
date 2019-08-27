@@ -29,7 +29,7 @@ class ProjectsSection extends React.Component {
       projects: [],
       selectedProject: [],
       cats: [{cat:"All",icon:faInfinity}, {cat:"React",icon:faReact}, {cat:"Java",icon:faJava}, {cat:"Python",icon:faPython}, {cat:"C#",icon:faCopyright}],
-     
+      Modal:false,
       // cats: [{cat:"All",icon:"test"}, "React", "Java", "Python", "C#"],
       displayedCat: "All"
     };
@@ -39,15 +39,15 @@ class ProjectsSection extends React.Component {
   }
 
   GetOut = async args => {
-    this.setState({ isRendered: true, selectedProject: [] });
+    this.setState({ isRendered: true, selectedProject: [], Modal : false });
   };
 
   handleProjectSelect = async args => {
 
 
-    this.setState({ isRendered: false, selectedProject: args });
+    this.setState({ isRendered: false, selectedProject: args, Modal : !this.state.Modal });
     console.log("lano");
-  };n
+  };
 
   getMyData = async () => {
     // fetch("http://tanweerbaig.co.uk/api/p")
@@ -138,10 +138,19 @@ class ProjectsSection extends React.Component {
         <div id="ProjSec">
                      {!this.state.isRendered ? 
          
-             ( <Modal title={selectProject.name} img={selectProject.logo} desc={selectProject.description} link={selectProject.link} show ={true} >{<ReactMarkdown plugins={[breaks]} source={selectProject.content} />}</Modal>): ( <div></div>
-   
-          
-              )}
+                     ( 
+                     <Modal 
+                      title={selectProject.name} 
+                      img={selectProject.logo} 
+                      desc={selectProject.description} 
+                      link={GitHubLink+"/"+selectProject.link} 
+                      live={selectProject.live} 
+                      show ={<div className="Close" onClick={this.GetOut}>
+                        Close
+                        </div>} >
+                        {<ReactMarkdown plugins={[breaks]}
+                         source={selectProject.content} />}
+                         </Modal>): ( <div></div>)}
           <div className="sectionTitle">My Projects</div>
           {/* {this.state.isRendered ? (<div className="Nav">{categories}</div>) : (<div></div>)} */}
           <div className="Nav">{categories}</div>
