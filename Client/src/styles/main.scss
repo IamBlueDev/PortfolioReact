@@ -82,11 +82,13 @@ section {
         // margin: 2rem 0 4rem 0;
         width: 25rem;
         font-size: 40px;
-        background: $main;
+        // background: $main;
         text-align: center;
-        color: $text;
+        color: $text2;
         padding: 1rem;
-        box-shadow: 1px 2.5px 5px 1px $shadow;
+        // box-shadow: 1px 2.5px 5px 1px $shadow;
+        font-family: 'Cormorant Garamond',
+        serif;
     }
     .Footer {
         @media screen and (max-width: 640px) {

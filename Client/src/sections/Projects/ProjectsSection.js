@@ -16,6 +16,8 @@ import {
   faJava,
 } from "@fortawesome/free-brands-svg-icons";
 import {faInfinity,faCopyright} from '@fortawesome/free-solid-svg-icons';
+
+import Modal from '../../compontents/Modal/Modal';
 const ReactMarkdown = require('react-markdown')
 const breaks = require('remark-breaks')
 class ProjectsSection extends React.Component {
@@ -134,48 +136,34 @@ class ProjectsSection extends React.Component {
       <section>
 
         <div id="ProjSec">
-          <div className="sectionTitle">My Projects</div>
-          {this.state.isRendered ? (<div className="Nav">{categories}</div>) : (<div></div>)}
-          <div className="Container">
-            {this.state.isRendered ? (
-              <div className="Items">{projects}</div>
-            ) : (
-                <div className="SelectedItem">
-                  <div className="ItemStatus">
-              <h6>{selectProject.status}</h6>
-            </div>
-                  <div className="Container">
-                    <div className="ScrollableImage"><img src={logo}/></div>
-                    <div className="Title"><h6>{selectProject.name}</h6></div>
-                    <div className="Description">
-                      {" "}
-                      <h6>  Short Description</h6>
-                      {<ReactMarkdown source={selectProject.description} escapeHtml={true} /> }
-                    </div>
-                    <div className="Goal">
-                      <h6>Goals</h6>
-
-
-                      {<ReactMarkdown plugins={[breaks]} source={selectProject.content} />}
-                    </div>
-                  </div>
-                  {/* <button  onClick={this.GetOut}>Back </button>  */}
-                  <div className="Button" onClick={this.GetOut}>
-                    Back
-                </div>
-                
-                  <div className="GitHubLink">
-                    <a href={GitHubLink+"/"+selectProject.link}>
-                      <FontAwesomeIcon icon={faGithub} />
-                    </a>
-                  </div>
-                </div>
+                     {!this.state.isRendered ? 
+         
+             ( <Modal title={selectProject.name} img={selectProject.logo} desc={selectProject.description} link={selectProject.link} show ={true} >{<ReactMarkdown plugins={[breaks]} source={selectProject.content} />}</Modal>): ( <div></div>
+   
+          
               )}
-          </div>
+          <div className="sectionTitle">My Projects</div>
+          {/* {this.state.isRendered ? (<div className="Nav">{categories}</div>) : (<div></div>)} */}
+          <div className="Nav">{categories}</div>
+          <div className="Container">
+            <div className="Items">{projects}</div>
+            </div>
+            {/* {!this.state.isRendered ? 
+         
+             ( <Modal title={selectProject.name} show ={true} >  <div className="SelectedItem">
+                {selectProject.status}
+             </div> </Modal>): ( <div> <h1>TEST</h1></div>
+          
+              )} */}
+          {/* </div> */}
+
+          
           <div className="Footer">
             More on <a  href={GitHubLink} target="_blank">GitHub</a>
             {/* style={{display: "table-cell"}} href={GitHubLink+"/"+object.link} target="_blank" */}
           </div>
+        
+          
           <div className='mouse-container absolute'>
   <a href="#EduSec"><div className='mouse'>
 

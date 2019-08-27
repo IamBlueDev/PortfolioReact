@@ -1,6 +1,6 @@
 @import '../../styles/palette';
 #EduSec {
-    background: rgba($background, 1);
+    background: rgba($background, 0.6);
     @media screen and (max-width: 640px) {
         height: 200%;
     }
@@ -29,15 +29,15 @@
                 margin-bottom: 5rem;
                 width: 80vw;
             }
-            box-shadow: 1px 2.5px 5px 1px $shadow;
+            // box-shadow: 1px 2.5px 5px 1px $shadow;
             width: 30rem;
             margin-left: 10rem;
-            background: $main;
+            // background: $main;
             display: flex;
             flex-direction: column;
             padding-bottom: 10rem;
             .itemTitle {
-                color: $text;
+                color: $text2;
                 margin: auto;
                 font-size: 35px;
                 margin-bottom: 1rem;
@@ -49,7 +49,7 @@
                 flex: 1 1 auto;
                 width: 25rem;
                 margin: 1rem auto;
-                background: transparent;
+                background: $main;
                 text-align: center;
                 box-shadow: 1px 2.5px 5px 1px $shadow;
                 .Job {
@@ -73,17 +73,17 @@
                 width: 80vw;
                 padding-bottom: 2rem;
             }
-            box-shadow: 1px 2.5px 5px 1px $shadow;
+            // box-shadow: 1px 2.5px 5px 1px $shadow;
             // float: right;
             // margin-right: 10rem;
             width: 30rem;
-            background: $main;
+            // background: $main;
             margin-right: 10rem;
             display: flex;
             flex-direction: column;
             padding-bottom: 10rem;
             .itemTitle {
-                color: $text;
+                color: $text2;
                 margin: auto;
                 font-size: 35px;
                 margin-bottom: 1rem;
@@ -95,10 +95,9 @@
                 flex: 1 1 auto;
                 margin: 5px;
                 text-align: center;
-                background: transparent;
+                background: $main;
                 width: 25rem;
                 margin: 1rem auto;
-                background: transparent;
                 text-align: center;
                 box-shadow: 1px 2.5px 5px 1px $shadow;
                 >.Edu {

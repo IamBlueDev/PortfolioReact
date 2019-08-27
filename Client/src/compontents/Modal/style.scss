@@ -1,0 +1,64 @@
+@import '../../styles/palette';
+.Modal {
+    h1 {
+        color: $text1;
+        background: rgba($background, .8);
+        padding: 5px;
+        text-align: center;
+    }
+    img {
+        // padding: 5px;
+        // width: 20rem;
+        // height: 12rem;
+        height: 300px;
+        max-width: 100%;
+    }
+    .Container {
+        margin: 0 0 5rem 0;
+        overflow-y: scroll;
+        height: auto;
+    }
+    padding: 10px;
+    position: absolute;
+    z-index: 3949238941;
+    top: 5rem;
+    background: rgba($main, 1);
+    display: flex;
+    flex-direction: column;
+    // margin: 25vh auto;
+    // text-align: center;
+    width: 550px;
+    max-height: 90%;
+}
+
+// .modal {
+//     width: 90%;
+//     background: white;
+//     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+//     position: fixed;
+//     top: 20vh;
+//     left: 5%;
+// }
+// .modal__header {
+//     padding: 1rem;
+//     background: #5101d1;
+//     color: white;
+// }
+// .modal__header h1 {
+//     margin: 0;
+//     font-size: 1.25rem;
+// }
+// .modal__content {
+//     padding: 1rem;
+// }
+// .modal__actions {
+//     display: flex;
+//     justify-content: flex-end;
+//     padding: 1rem;
+// }
+// @media (min-width: 768px) {
+//     .modal {
+//         width: 30rem;
+//         left: calc((100% - 30rem) / 2);
+//     }
+// }
