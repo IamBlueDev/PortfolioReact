@@ -106,8 +106,8 @@ class ProjectsSection extends React.Component {
   }
 
   getMyData = async () => {
-    fetch("http://tanweerbaig.co.uk/api/p")
-    // fetch("http://192.168.1.2:3001/api/p")    
+    // fetch("http://tanweerbaig.co.uk/api/p")
+    fetch("http://192.168.1.2:3001/api/p")    
       .then(res => {
         return res.json();
       })
@@ -153,8 +153,8 @@ class ProjectsSection extends React.Component {
                 <h5>Links</h5>
                 <div className="Links"> 
                   {/* <a style={{display: "table-cell"}} href={this.state.GitHubLink+"/"+object.link} target="_blank"> */}
-                  {object.live ?(<a target="_blank" href={object.live}><FontAwesomeIcon icon={faDesktop} size="3x"/></a>):(<div></div>)}
-                {object.link ?(<a target="_blank" href={this.state.GitHubLink+"/"+object.link}><FontAwesomeIcon icon={faGithub} size="3x"/></a>):(<div></div>)}
+                  {object.live ?(<a target="_blank" href={object.live}><FontAwesomeIcon icon={faDesktop} size="2x"/></a>):(<div></div>)}
+                {object.link ?(<a target="_blank" href={this.state.GitHubLink+"/"+object.link}><FontAwesomeIcon icon={faGithub} size="2x"/></a>):(<div></div>)}
 
              
                                    {/* <a href={GitHubLink+"/"+object.link}> */}
