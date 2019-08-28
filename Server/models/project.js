@@ -12,6 +12,9 @@ module.exports = (sequelize, type) => {
         status:type.STRING,
         link:type.STRING,
         logo:type.STRING,
-        
+        info:type.STRING,
+        live:type.STRING,
+
+
     })
 }

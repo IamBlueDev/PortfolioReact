@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import './style.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faDesktop} from '@fortawesome/free-solid-svg-icons';
 
 import {
     faGithub,
@@ -46,7 +47,7 @@ export default class Modal extends Component{
                 
 
                 <div className="Social">
-                {this.props.live ?(<div><a target="_blank" href={this.props.live}><FontAwesomeIcon icon={faGithub} size="3x"/></a></div>):(<div></div>)}
+                {this.props.live ?(<div><a target="_blank" href={this.props.live}><FontAwesomeIcon icon={faDesktop} size="3x"/></a></div>):(<div></div>)}
                 {this.props.link ?(<div><a target="_blank" href={this.props.link}><FontAwesomeIcon icon={faGithub} size="3x"/></a></div>):(<div></div>)}
 
 

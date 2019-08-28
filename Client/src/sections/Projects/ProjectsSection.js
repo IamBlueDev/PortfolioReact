@@ -15,7 +15,7 @@ import {
   faPython,
   faJava,
 } from "@fortawesome/free-brands-svg-icons";
-import {faInfinity,faCopyright} from '@fortawesome/free-solid-svg-icons';
+import {faInfinity,faCopyright,faDatabase,faDesktop} from '@fortawesome/free-solid-svg-icons';
 
 import Modal from '../../compontents/Modal/Modal';
 const ReactMarkdown = require('react-markdown')
@@ -29,9 +29,22 @@ class ProjectsSection extends React.Component {
       projects: [],
       selectedProject: [],
       cats: [{cat:"All",icon:faInfinity}, {cat:"React",icon:faReact}, {cat:"Java",icon:faJava}, {cat:"Python",icon:faPython}, {cat:"C#",icon:faCopyright}],
+      langs: [{cat:"All",icon:faInfinity},
+      {cat:"NodeJS",icon:faNode}, 
+      {cat:"Express",icon:faDatabase},
+      {cat:"Sequelize",icon:faDatabase}, 
+      {cat:"MySQL",icon:faDatabase}, 
+      {cat:"MongoDB",icon:faDatabase}, 
+      {cat:"React",icon:faReact}, 
+      {cat:"Java",icon:faJava}, 
+      {cat:"Python",icon:faPython}, 
+      {cat:"C#",icon:faCopyright},
+      {cat:"Unity3D",icon:faCopyright}],
+      
       Modal:false,
+      GitHubLink:"https://github.com/IamBlueDev",
       // cats: [{cat:"All",icon:"test"}, "React", "Java", "Python", "C#"],
-      displayedCat: "All"
+      displayedCat: "All",
     };
   }
   componentDidMount() {
@@ -49,9 +62,52 @@ class ProjectsSection extends React.Component {
     console.log("lano");
   };
 
+  findArrayElementByTitle = async (array, title) => {
+    // console.log(title);
+    return array.find((element) => {
+      return element.cat === title;
+    })
+  };
+  //  findArrayElementByTitle = aysnc (array, title) => {
+  //   return array.find((element) => {
+  //     return element.title === title;
+  //   })
+  // }
+  getLangs = (object) =>{
+    const list = object.split(",");
+    // console.log(list);
+      return list.map((cat,index) => {
+        // console.log(this.state.cats["0"]);
+        const test = this.state.langs.find((element) => {
+          return element.cat === cat;
+        })
+        console.log(cat);
+         console.log(test);
+        return (
+
+
+          (typeof test !=='undefined')?<p><FontAwesomeIcon icon={test.icon} size="2x"/>{test.cat}</p>:<div></div>
+          // {test &&
+          //   <p><FontAwesomeIcon icon={test.icon} size="2x"/></p>}
+        
+        // <p><FontAwesomeIcon icon={this.state.cats[cat].icon} size="2x"/></p>
+        )
+      })
+  }
+
+  loadCats = ()=>{
+    return Object.keys(this.state.cats).map((cat, index) =>{
+      // console.log(cat);
+      // this.state.cats.map(cat,icon => {
+        return (
+          <div className="Item" onClick={this.setCategory.bind(this, this.state.cats[cat].cat)}><FontAwesomeIcon icon={this.state.cats[cat].icon} size="2x"/> {this.state.cats[cat].cat}</div>
+        )
+      })
+  }
+
   getMyData = async () => {
-    // fetch("http://tanweerbaig.co.uk/api/p")
-    fetch("http://localhost:3001/api/p")    
+    fetch("http://tanweerbaig.co.uk/api/p")
+    // fetch("http://192.168.1.2:3001/api/p")    
       .then(res => {
         return res.json();
       })
@@ -64,17 +120,18 @@ class ProjectsSection extends React.Component {
     this.setState({ displayedCat: cat });
   }
   render() {
-    const GitHubLink = "https://github.com/IamBlueDev";
+    
     const projects = this.state.projects
       .filter(
         ({ lang }) =>
           this.state.displayedCat === lang || this.state.displayedCat === "All"
       )
       .map(object => {
+        // console.log(object)
+        // object.langs = "React,Java,NodeJS"
+
         return (
-          <div
-            className="Item "
-          >
+          <div className="Item ">
 
             <div class="ribbon"><span>{object.status}</span></div>
              <div className="ItemIcon"
@@ -89,53 +146,35 @@ class ProjectsSection extends React.Component {
             </div>
               <div className="Quick_Links"><p>Quick Info</p></div>
               <div className="QuickInfo_Content">
-                <div className="Langs"><p> <FontAwesomeIcon icon={faReact} size="3x"/></p><p><FontAwesomeIcon icon={faNode} size="3x"/></p></div>
-                <div className="Links"> <h5>Links</h5>
-                  <a style={{display: "table-cell"}} href={GitHubLink+"/"+object.link} target="_blank">
-                                  
-                                   {/* <a href={GitHubLink+"/"+object.link}> */}
-                      <FontAwesomeIcon icon={faGithub} size="3x"/> </a></div>
-              </div>
-            {/* <div className=" ribbion ribbion-top-left">
-              <h6>{object.lang}</h6>
-            </div>
-            <div className="ItemStatus ribbon ribbon-top-right" >
-              {" "}
-              <span>{object.status}</span>
-            </div>
-            {/* <div class="ribbon ribbon-top-left"><span>ribbon</span></div> */}
-          {/* 
-            <div className="ItemIcon"
-            onClick={this.handleProjectSelect.bind(this, object)}
-            co
-            >
-              <img src={logo} />
-              {/* <img src="https://www.economist.com/sites/default/files/images/2015/09/blogs/economist-explains/code2.png"/> */}
-              {/* <img src="https://www.easypromosapp.com/blog/en/wp-content/uploads/random_piker_to_select_the_winner_of_your_conetst.jpg" /> */}
-            {/* </div> 
+                {/* <div className="Langs"><p> <FontAwesomeIcon icon={faReact} size="3x"/></p><p><FontAwesomeIcon icon={faNode} size="3x"/></p></div> */}
+                {/* {object.langs = "React,Java,NodeJS"} */}
+              {console.log(object.info)}
+                <div className="Langs">{this.getLangs(object.info)}</div>
+                <h5>Links</h5>
+                <div className="Links"> 
+                  {/* <a style={{display: "table-cell"}} href={this.state.GitHubLink+"/"+object.link} target="_blank"> */}
+                  {object.live ?(<a target="_blank" href={object.live}><FontAwesomeIcon icon={faDesktop} size="3x"/></a>):(<div></div>)}
+                {object.link ?(<a target="_blank" href={this.state.GitHubLink+"/"+object.link}><FontAwesomeIcon icon={faGithub} size="3x"/></a>):(<div></div>)}
 
-            <div className="ItemTitle">
-              <h6>{object.name}</h6> 
-            </div>*/}
+             
+                                   {/* <a href={GitHubLink+"/"+object.link}> */}
+                      {/* <FontAwesomeIcon icon={faGithub} size="3x"/> </a> */}
+                      </div>
+              </div>
           </div>
         );
       });
 
-    const categories = 
-    Object.keys(this.state.cats).map((cat, index) =>{
 
-    // this.state.cats.map(cat,icon => {
-      return (
-        <div className="Item" onClick={this.setCategory.bind(this, this.state.cats[cat].cat)}><FontAwesomeIcon icon={this.state.cats[cat].icon} size="2x"/> {this.state.cats[cat].cat}</div>
-      )
-    })
+    const categories = this.loadCats();
 
-    // const GitHubLink = "https://github.com/IamBlueDev";
     const selectProject = this.state.selectedProject;
+    
     return (
       <section>
 
         <div id="ProjSec">
+
                      {!this.state.isRendered ? 
          
                      ( 
@@ -143,7 +182,7 @@ class ProjectsSection extends React.Component {
                       title={selectProject.name} 
                       img={selectProject.logo} 
                       desc={selectProject.description} 
-                      link={GitHubLink+"/"+selectProject.link} 
+                     link={this.state.GitHubLink+"/"+selectProject.link} 
                       live={selectProject.live} 
                       show ={<div className="Close" onClick={this.GetOut}>
                         Close
@@ -151,25 +190,19 @@ class ProjectsSection extends React.Component {
                         {<ReactMarkdown plugins={[breaks]}
                          source={selectProject.content} />}
                          </Modal>): ( <div></div>)}
+
+
           <div className="sectionTitle">My Projects</div>
-          {/* {this.state.isRendered ? (<div className="Nav">{categories}</div>) : (<div></div>)} */}
           <div className="Nav">{categories}</div>
           <div className="Container">
+
             <div className="Items">{projects}</div>
             </div>
-            {/* {!this.state.isRendered ? 
-         
-             ( <Modal title={selectProject.name} show ={true} >  <div className="SelectedItem">
-                {selectProject.status}
-             </div> </Modal>): ( <div> <h1>TEST</h1></div>
-          
-              )} */}
-          {/* </div> */}
+
 
           
           <div className="Footer">
-            More on <a  href={GitHubLink} target="_blank">GitHub</a>
-            {/* style={{display: "table-cell"}} href={GitHubLink+"/"+object.link} target="_blank" */}
+            More on <a  href={this.state.GitHubLink} target="_blank">GitHub</a>
           </div>
         
           

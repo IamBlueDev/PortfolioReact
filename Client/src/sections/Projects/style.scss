@@ -1,5 +1,9 @@
 @import '../../styles/palette';
 #ProjSec {
+    @media screen and (max-width: 640px) {
+        height: 100vh;
+        // grid-template-columns: repeat(auto-fill, minmax(100px, 2fr));
+    }
     background: rgba($background, 0.5);
     overflow: hidden;
     height: 100%;
@@ -11,6 +15,10 @@
         margin: 1rem;
     }
     .Nav {
+        @media screen and (max-width: 640px) {
+            width: auto;
+            overflow: hidden;
+        }
         display: flex;
         width: 40rem;
         padding: 2rem;
@@ -37,7 +45,7 @@
         width: 100%;
         height: 40rem;
         margin-left: 2rem;
-        overflow-y: scroll;
+        // overflow-y: scroll;
         >.SelectedItem {
             padding: .5rem;
             >.ItemStatus {
@@ -114,21 +122,32 @@
         >.Items {
             @media screen and (max-width: 640px) {
                 display: flex;
-                // grid-template-columns: repeat(auto-fill, minmax(100px, 2fr));
-                overflow-x: hidden;
+                overflow: visible;
             }
             height: 100%;
-            overflow-y: scroll;
+            overflow-y: hidden;
             display: flex;
             flex-wrap: wrap;
             // grid-template-columns: repeat(auto-fill, minmax(246px, 1fr));
             >.Item {
                 @media screen and (max-width: 640px) {
-                    margin-top: 5rem;
+                    // margin-top: 5rem;
+                    // display: flex;
+                    height: 5rem;
+                    width: 5rem;
+                    overflow: hidden;
+                    >.QuickInfo_Content {
+                        display: none;
+                    }
+                    >.ItemTitle {
+                        display: none;
+                    }
+                    >.Quick_Links {
+                        display: none;
+                    }
                 }
                 display: flex;
                 flex-direction: column;
-                >.ItemLanguage {}
                 >.ItemStatus {
                     z-index: 1;
                     position: relative;
@@ -183,25 +202,32 @@
 .Quick_Links {
     margin-top: 1rem;
     p {
-        color: $text1;
+        color: $text;
         font-weight: 600;
     }
 }
 
 .QuickInfo_Content {
+    height: 10rem;
+    overflow: hidden;
+    h5 {
+        color: $text1;
+        position: absolute;
+        left: 40%;
+        bottom: 4rem;
+    }
     >.Langs {
         display: flex;
-        overflow: hidden;
-        width: 10rem;
+        width: auto;
         height: 3.5rem;
         background: $main;
         // background: red;
         // border: 2px solid #F25F5C;
         // box-shadow: 1px 2.5px 5px 1px $shadow;
-        margin: 0 0 0 1rem;
+        margin: 0 0 0 .5rem;
         >p {
-            color: rgba($text1, 1);
-            margin-right: 1rem;
+            color: rgba($text2, 1);
+            margin-right: .5rem;
             // margin: 1rem 1rem 0 1rem;
             // box-shadow: 1px 2.5px 5px 1px $shadow;
             padding: .5rem;
@@ -215,20 +241,12 @@
     }
     >.Links {
         overflow: hidden;
-        width: 13rem;
+        width: auto;
         bottom: 5px;
         left: 5px;
-        h5 {
-            color: $text1;
-            position: absolute;
-            left: 40%;
-            bottom: 4rem;
-        }
-        // position: relative;
+        position: absolute;
         a {
-            bottom: 5px;
-            left: 1.5rem;
-            position: absolute;
+            padding: 1rem;
             color: rgba($text1, 0.8);
             &:hover {
                 cursor: pointer;
@@ -239,14 +257,12 @@
 }
 
 @import url(https://fonts.googleapis.com/css?family=Lato:700);
-// body {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     min-height: 100vh;
-//     background: #f0f0f0;
-// }
 .ribbon {
+    @media screen and (max-width: 640px) {
+        top: -10px;
+        width: 75px;
+        height: 75px;
+    }
     position: absolute;
     right: -5px;
     top: -5px;
@@ -258,6 +274,11 @@
 }
 
 .ribbon span {
+    @media screen and (max-width: 640px) {
+        font-size: 5px;
+        width: 100px;
+        line-height: 15px;
+    }
     font-size: 10px;
     font-weight: bold;
     color: #FFF;
@@ -298,29 +319,4 @@
     border-right: 3px solid #79A70A;
     border-bottom: 3px solid transparent;
     border-top: 3px solid #79A70A;
-}
-
-// .Modal {
-//     margin: 25vh auto;
-//     text-align: center;
-//     width: 50vw;
-//     height: 50vh;
-//     position: absolute;
-//     background: $main;
-// }
-body.modal-open {
-    /* disable scrollbar on both x and y axis */
-    overflow: hidden;
-    /* disable scrollbar on x-axis only */
-    overflow-x: hidden;
-    /* disable scrollbar on y-axis only */
-    overflow-y: hidden;
-    /* disable scroll */
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* OPTIONAL: none of dom element will be click-able */
-    pointer-events: none;
 }
