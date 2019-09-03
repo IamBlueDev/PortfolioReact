@@ -1,6 +1,7 @@
 @import '../../styles/palette';
 #EduSec {
-    background: rgba($background, 0.6);
+    // background: rgba($background, 0.6);
+    
     @media screen and (max-width: 640px) {
         height: auto;
     }
@@ -35,7 +36,8 @@
             flex-direction: column;
             padding-bottom: 10rem;
             .itemTitle {
-                color: $text2;
+                // color: $text2;
+                color:$header;
                 margin: auto;
                 font-size: 35px;
                 margin-bottom: 1rem;
@@ -51,7 +53,7 @@
                 text-align: center;
                 box-shadow: 1px 2.5px 5px 1px $shadow;
                 .Job {
-                    color: $highlight;
+                    color: $subheader;
                     font-size: 22px;
                 }
                 &:hover {
@@ -80,7 +82,8 @@
             flex-direction: column;
             padding-bottom: 10rem;
             .itemTitle {
-                color: $text2;
+                // color: $text2; 
+                color:$header;
                 margin: auto;
                 font-size: 35px;
                 margin-bottom: 1rem;
@@ -98,7 +101,7 @@
                 text-align: center;
                 box-shadow: 1px 2.5px 5px 1px $shadow;
                 >.Edu {
-                    color: $text1;
+                    color: $subheader;
                     font-size: 19px;
                     font-weight: 500;
                 }

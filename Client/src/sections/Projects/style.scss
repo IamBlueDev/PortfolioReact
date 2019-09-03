@@ -4,7 +4,7 @@
         height: 100vh;
         // grid-template-columns: repeat(auto-fill, minmax(100px, 2fr));
     }
-    background: rgba($background, 0.5);
+    // background: rgba($background, 0.5);
     overflow: hidden;
     height: 100%;
     display: flex;
@@ -33,7 +33,7 @@
             padding: 2px 1rem 2px 1rem;
             box-shadow: 1px 2.5px 5px 1px $shadow;
             background: rgba($menuitems, 0.8);
-            color: white;
+            color: $menuitems_T;
             // background: rgba($text, 0.5);
         }
          :hover {
@@ -130,6 +130,7 @@
             flex-wrap: wrap;
             // grid-template-columns: repeat(auto-fill, minmax(246px, 1fr));
             >.Item {
+                border-radius: 1.5rem;
                 @media screen and (max-width: 640px) {
                     // margin-top: 5rem;
                     // display: flex;
@@ -162,6 +163,7 @@
                     overflow: hidden;
                     width: 20rem;
                     img {
+                        border-radius: 1.5rem;
                         // padding: 5px;
                         width: 20rem;
                         height: 12rem;
@@ -177,10 +179,10 @@
                 }
                 &:hover {
                     // box-shadow: 4px 4.5px 5px 1px black;
-                    border: 1px solid black;
+                    // border: 1px solid black;
                     // background: rgba($main, 0.6);
                     h6 {
-                        font-weight: 900;
+                        // font-weight: 900;
                         color: rgba($text1, 1);
                     }
                 }
@@ -247,10 +249,10 @@
         position: absolute;
         a {
             padding: 1rem;
-            color: rgba($text1, 0.8);
+            color: rgba($menuitems_T, 0.8);
             &:hover {
                 cursor: pointer;
-                color: rgba($text1, 1);
+                color: rgba($menuitems_H, 1);
             }
         }
     }
@@ -281,7 +283,7 @@
     }
     font-size: 10px;
     font-weight: bold;
-    color: #FFF;
+    color: black;
     text-transform: uppercase;
     text-align: center;
     line-height: 20px;
