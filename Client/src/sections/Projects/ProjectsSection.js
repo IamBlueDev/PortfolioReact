@@ -86,7 +86,7 @@ class ProjectsSection extends React.Component {
         return (
 
 
-          (typeof test !=='undefined')?<p><FontAwesomeIcon icon={test.icon} size="2x"/>{test.cat}</p>:<div></div>
+          (typeof test !=='undefined')?<p><FontAwesomeIcon icon={test.icon} size="2x"/><span>{test.cat}</span></p>:<div></div>
           // {test &&
           //   <p><FontAwesomeIcon icon={test.icon} size="2x"/></p>}
         
@@ -100,7 +100,7 @@ class ProjectsSection extends React.Component {
       // console.log(cat);
       // this.state.cats.map(cat,icon => {
         return (
-          <div className="Item" onClick={this.setCategory.bind(this, this.state.cats[cat].cat)}><FontAwesomeIcon icon={this.state.cats[cat].icon} size="2x"/> {this.state.cats[cat].cat}</div>
+          <div className="Item" onClick={this.setCategory.bind(this, this.state.cats[cat].cat)}><FontAwesomeIcon icon={this.state.cats[cat].icon} size="2x"/> <span>{this.state.cats[cat].cat}</span></div>
         )
       })
   }

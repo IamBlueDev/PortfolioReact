@@ -1,6 +1,13 @@
 import React from 'react';
 
 import './style.scss';
+import mdx from '../../placeholders/mdxlogo.png';
+import mcd from '../../placeholders/mcdlogo.png';
+import la from '../../placeholders/LAlogo.png';
+import hsbc from '../../placeholders/hsbclogo.png';
+
+
+
 
 const EducationSection = (props, context) => {
 
@@ -13,9 +20,12 @@ const EducationSection = (props, context) => {
             <div className="Container">
             <div className="Work">
             <div className="itemTitle">
-                Work
+                <span>Work</span>
               </div>
               <div className="Item">
+                <div className="Icon">
+                <img src={mcd}/>
+                  </div> 
                 <div className="Job">Customer Experience Leader</div>
                 <div className="Title">Mcdoanlds</div>
 
@@ -23,6 +33,9 @@ const EducationSection = (props, context) => {
 
               </div>
               <div className="Item">
+              <div className="Icon">
+                <img src={mdx}/>
+                  </div> 
                 <div className="Job">Learning Assistant</div>
                 <div className="Title">Middlesex University</div>
 
@@ -30,6 +43,9 @@ const EducationSection = (props, context) => {
 
               </div>
               <div className="Item">
+              <div className="Icon">
+                <img src={hsbc}/>
+                  </div> 
                 <div className="Job">Accountant</div>
                 <div className="Title">HSBC Work Experience</div>
 
@@ -45,6 +61,9 @@ const EducationSection = (props, context) => {
               </div>
 
             <div className="Item">
+            <div className="Icon">
+                <img src={mdx}/>
+                  </div> 
                 <div className="Edu">BSc Computer Networks</div>
                 <div className="Title">Middlesex University</div>
 
@@ -52,6 +71,9 @@ const EducationSection = (props, context) => {
 
               </div>
               <div className="Item">
+              <div className="Icon">
+                <img src={la}/>
+                  </div> 
                 <div className="Edu">Engineering (B) | ICT(B) | Media Studies (C)</div>
                 <div className="Title">London Academy Sixth Form</div>
 
@@ -59,6 +81,9 @@ const EducationSection = (props, context) => {
 
               </div>
               <div className="Item">
+              <div className="Icon">
+                <img src={la}/>
+                  </div> 
                 <div className="Edu">Core GCSEs and 2 BTECs (ICT & Engineering)</div>
                 <div className="Title">London Academy</div>
 
