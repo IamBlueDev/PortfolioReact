@@ -1,0 +1,26 @@
+@import './../../styles/base.scss';
+.topBar{
+    
+    
+    background: $main;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: "100%";
+    height: $topBarHeight;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    &#mobile{
+        width:100%;
+    }
+    //Once it has passwed the first page, animate the logo on the bar
+    &.Past{
+        display: true;
+    }
+    display:none;
+
+}

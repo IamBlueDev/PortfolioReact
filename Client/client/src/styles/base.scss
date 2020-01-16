@@ -1,0 +1,32 @@
+@import './pallete.scss';
+@import './breakpoints3.scss';
+@import './utils.scss';
+$topBarWidth: 20px;
+$topBarHeight: 20px;
+
+body{
+    height: 100%;
+}
+
+.Socails{
+    
+    position: absolute;
+    top:50vh;
+    background: rgba($color: red, $alpha: .5);  
+    >li{
+        list-style:none;
+        padding: 1rem;
+    }
+}
+
+#root{
+    background:$appBackground;
+    height: auto;
+    overflow: hidden;
+}
+.App{
+    width: 100%;
+    background: rgba($color: red, $alpha: .1);
+    height: 100vh;
+
+}

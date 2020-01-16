@@ -1,0 +1,190 @@
+$radius : 20px;
+@mixin test {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+     -ms-border-radius: $radius;
+         border-radius: $radius;
+         @warn "Changing settings";
+}
+
+@import './../../styles/base.scss';
+.Project{
+    // background: $testcolor;
+@include respond-to('small'){
+    position: relative;
+    height: 12rem;
+    // margin: 1rem 0rem 1rem 2.5rem;
+    margin: 1rem auto;
+    width: 15rem;
+    // border:5px solid black;
+    background:$Project;   
+    color: $Project_T;
+    border-radius: 0 1rem 1rem 1rem;
+    >*{
+        overflow: hidden;
+    }
+    >.Title{
+        position: absolute;
+        left: 12rem;
+        top: 5rem;
+        // left: 15rem;s
+        // top: 12rem;
+        transform: rotate(90deg);
+        color: $Project_H;
+        // background: grey;
+        color:$Project_T;
+        &:hover{
+            cursor: pointer;
+            background: $main;
+        }
+    }
+    >.Icon{
+        >img{
+            width: 8rem;
+            height: 8rem;
+        }
+    }
+    >.Description{
+        display: none;
+
+    }
+    >.Tags{
+     display: flex;
+     width: 15rem;
+     flex-wrap: wrap;
+     &:hover{
+         background: transparent;
+     }
+        >.Tag{
+            // display: inline
+            border-radius: 1rem;
+            width:auto;
+            height: auto;
+            font-size: 8px;
+            background: $Project_Tag_B;
+            color: $Project_Tag_T;
+            margin: auto;
+            padding: 0.5rem;
+            &:hover{
+                background: $Project_Tag_A;
+            }
+            
+        }
+    }
+    >div{
+        // background: $ProjectSub;
+        // &:hover{
+        //     background: pink;
+        // }
+    }
+    >.Langs{
+        position: absolute;
+        top: 0;
+        left: -2rem;
+        width: 2rem;
+        height: 12rem;
+        overflow: visible;
+        >li{
+            // margin: 0 0rem 0.1rem -0.1rem;
+            // border: 1px solid black;
+            border-left: 1px solid black;
+            // border-radius: 0 0 0rem 1rem ;
+            background: $Project_Lang_B;
+            list-style: none;
+            height: 2rem;
+            
+            &:hover{
+                background: $Project_Lang_A;
+            }
+            width: 100%;
+            >img{
+                width: 1.5rem;
+                height: 1.2rem;
+                color: black;
+            }
+        }
+        >li:first-child{
+            border-radius: 1rem 0 0 0 ;
+        }
+        >li:last-child{
+            // background: red;
+            border-radius: 0 0 0rem 1rem ;
+
+        }
+        // display: flex;
+        flex-wrap: wrap;
+    }
+    
+}
+@include respond-to('medium'){
+    background: orange;
+    
+    >.Title{
+        background:black;
+    }
+    >.Langs{
+        display: none;
+        position: relative;
+
+        // background: green;
+        width: auto;
+        width: 10rem;
+        height: 5rem;
+        display: flex;
+        left: 0;
+        >#text{
+          color: black; 
+          background: green($color: #000000); 
+        }
+    }
+}
+@include respond-to('large'){
+    width: 20rem;
+    >div{
+        color: blue;
+    }
+    >.Title{
+        color: blue;
+        background: red;
+        &:hover{
+            background: pink;
+        }
+    }
+    
+}
+    >.Title{
+        &:hover{
+            cursor: pointer;
+            background: green;
+        }
+    }
+    color: black;
+//     >.mob{
+//  @include xsmall
+//         background: black;
+//     }
+
+//     #mob{
+//         background: red;
+        
+//     }
+//     background: mediumspringgreen;
+//     color: yellow;
+}
+
+
+//Container for Projects
+.Projects{
+    // background: red;
+    @include respond-to('small'){
+        height: 90vh;
+    }
+    @include respond-to('medium'){
+        display: flex;
+        height: 75vh;
+    }
+    @include respond-to('large'){
+        
+    }
+
+}
