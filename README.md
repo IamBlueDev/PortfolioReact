@@ -1,5 +1,5 @@
-    [![LinkedIn][linkedin-shield]][linkedin-url]
 <br />
+[![LinkedIn][linkedin-shield]][linkedin-url]
 <p align="center">
   <a href="">
     <img src="Client\src\imgs\icon.png" alt="Logo" width="80" height="80">
