@@ -1,5 +1,5 @@
-<br />
 [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/Naereen/)
+<br />
 <p align="center">
   <a href="">
     <img src="Client\src\imgs\icon.png" alt="Logo" width="80" height="80">
