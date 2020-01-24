@@ -10,14 +10,14 @@
   <p align="center">
     A React portfolio project.
     <br />
-    
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](http://reactjs.com)
+    <p align="center">
 
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](http://reactjs.com)
+</p>
    <br />
     <br />
     <a href="http://tanweerbaig.co.uk/">View Demo</a>
     ·
-    
     <a href="https://github.com/IamBlueDev/PortfolioReact/issues/new">Report Bug</a>
     
    
