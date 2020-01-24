@@ -9,7 +9,7 @@
   <p align="center">
     A React portfolio project.
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+
     <br />
     <br />
     <a href="http://tanweerbaig.co.uk/">View Demo</a>
