@@ -7,6 +7,7 @@ import Main from './pages/Main/Main';
 import Projects from './pages/Projects/Projects';
 import visualContext from './Utils/context/visualContext';
 import SocialBar from './components/socialBar/SocialBar';
+import Experience from './pages/Experience/Experience';
 class App extends React.Component{
 
  state={
@@ -54,8 +55,9 @@ class App extends React.Component{
         {/* hello  */}
         {/* {this.state.windowWidth} */}
         <TopBar/>
+        <Main /> 
         <Projects/>
-        {/* <Main />  */}
+        <Experience/>
         <SocialBar/>
       </div>
       </visualContext.Provider>

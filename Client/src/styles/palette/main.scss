@@ -1,4 +1,4 @@
-
+@import './mobile.scss';
 // ----------------------------------------------------------------------------
 //Base Colors
 // ----------------------------------------------------------------------------
@@ -8,6 +8,11 @@ $appBackground:linear-gradient(336deg, rgba(121, 121, 121, 0.06) 0%, rgba(121, 1
 // $appBackground: black; // Main Background color
 $appText:white; // Main Text color
 $appHeading:Purple; // Main header color
+// ----------------------------------------------------------------------------
+// Landing Section Colors
+// ----------------------------------------------------------------------------
+$Landing_T: rgba(white,0.6);
+
 // ----------------------------------------------------------------------------
 // Project Section Colors
 // ----------------------------------------------------------------------------
@@ -21,14 +26,13 @@ $Project_Lang_T:black;
 $Project_Tag_B: rgba(blue,0.1); // Project Tag Background
 $Project_Tag_A: rgba(grey,0.5);//Project Tag Hover color    
 $Project_Tag_T:white;//Project Tag text color
-
-// ----------------------------------------------------------------------------
-// Mobile Pallete colors
-// ----------------------------------------------------------------------------
-$M_main:grey;//Main mobile color
-
 // ----------------------------------------------------------------------------
 // Social Bar Pallete
 // ----------------------------------------------------------------------------
 $Social: rgba(black,0.4); // Social Bar background
 $Social_T: white; //Socaal Bar Text;
+$Soical_H: rgba(gray, 0.5); // Social Item Hover 
+$Social_I: rgba(red,.6); //Social Item Color
+
+
+

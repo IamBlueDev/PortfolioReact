@@ -1,6 +1,11 @@
 import React from 'react';
 import './Projects.scss';
 import placeholder from './../../imgs/coding.png';
+import jsIcon from './../../imgs/Javascript.png';
+import reactIcon from './../../imgs/React.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+// import {linkedInIcon,reactIcon,jsIcon} from './../../Utils/images.js';
 class projects extends React.Component{
     state={
         dummyProject:[{           
@@ -26,8 +31,10 @@ class projects extends React.Component{
                 <div className="Icon"><img src={placeholder}/></div>
                 <div className="Description">{item.desc}</div>
                 <div className="Langs"> 
-                <li><img src={placeholder}/></li>
-                <li><img src={placeholder}/></li>
+                
+                 <li><img src={jsIcon}/></li>
+
+                <li><img src={reactIcon}/></li>
 
                 <li> <img src={placeholder}/></li> 
                 </div>
@@ -43,6 +50,7 @@ class projects extends React.Component{
         })
         return(
             <div className="Projects">
+                <h1>Starred Projects</h1>
                 {dummyProjects}
                 {/* <div className="Title">Projects</div>
                 <div className="item">

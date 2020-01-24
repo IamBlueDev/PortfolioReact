@@ -1,0 +1,33 @@
+// ----------------------------------------------------------------------------
+// Mobile Pallete colors
+// ----------------------------------------------------------------------------
+$M_main:grey;//Main mobile color
+// ----------------------------------------------------------------------------
+// Mobile Project Section Pallete
+// ----------------------------------------------------------------------------
+
+$M_Project: rgba(white, 0.2);// Project background color
+$M_Project_T: black;//Project text color
+$M_Project_H: purple;//Project header color
+$M_ProjectSub:transparent; //Project sub divs background.
+$M_Project_Lang_B: rgba(white,0.2);
+$M_Project_Lang_A: rgba(grey,0.5);
+$M_Project_Lang_T:black;
+$M_Project_Tag_B: rgba(blue,0.1); // Project Tag Background
+$M_Project_Tag_A: rgba(grey,0.5);//Project Tag Hover color    
+$M_Project_Tag_T:white;//Project Tag text color
+
+// ----------------------------------------------------------------------------
+// Mobile Social Bar Pallete
+// ----------------------------------------------------------------------------
+$M_Social: rgba(gray, 1);// Social Bar background
+$M_Social_T: rgba(white, .6   ); // Social Bar Text
+$M_Social_H: rgba(white, 0.1); // Social Item Hover 
+$M_Social_I: rgba(red,.6); //Social Item Color
+
+
+$M_Exp_Bar: rgba(white,.5);
+$M_Exp_Bar_A: rgba(white,.8);
+$M_Exp_Dot: rgba(white,1);
+$M_Exp_Dot_A: rgba(red,1);
+

@@ -1,0 +1,67 @@
+@import './../../styles/base.scss';
+
+.Social{
+    background: pink;
+    position: fixed;
+    width: 100vw;
+    height: 2.5rem;
+    display: flex;
+    @include respond-to('small'){
+        bottom: 0px;
+        >li{
+            @include list-style;
+        }
+        >.Item{
+            margin: auto;
+            width: 100vw;
+            // display: flex;
+            >.img{
+                width: 5rem;
+                color: $M_Social_I;
+                height: 1.5rem;
+            }
+            color: $M_Social_T;
+            &:hover{
+                background:$M_Social_H;
+                >.img{
+                    color: rgba($M_Social_I, .5);
+                }
+            }
+        }
+        z-index: 4;
+        background: $M_Social;
+    }
+    @include respond-to('medium'){
+        display: block;
+        top: 15rem;
+        width: 3rem;
+        height: 3rem;
+        left: 0;
+        .Item{
+            cursor: pointer;
+            background: $Social;
+            width: 3rem;
+            height: 3rem;
+            >.img{
+                width: 1.5rem;
+                height: 1.5rem;
+                margin: 1rem 0 0 0;
+                color: $Social_I;
+            }
+            color: $Social_T;
+        }   
+    }
+    @include respond-to('large'){
+        display: block;
+        top: 15rem;
+        width: 3rem;
+        height: 3rem;
+        left: 0;
+        .Item{
+            cursor: pointer;
+            // background: red;
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+}

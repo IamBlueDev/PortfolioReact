@@ -11,6 +11,7 @@ $radius : 20px;
 .Project{
     // background: $testcolor;
 @include respond-to('small'){
+
     position: relative;
     height: 12rem;
     // margin: 1rem 0rem 1rem 2.5rem;
@@ -84,6 +85,7 @@ $radius : 20px;
         width: 2rem;
         height: 12rem;
         overflow: visible;
+        // background: black;
         >li{
             // margin: 0 0rem 0.1rem -0.1rem;
             // border: 1px solid black;
@@ -92,12 +94,15 @@ $radius : 20px;
             background: $Project_Lang_B;
             list-style: none;
             height: 2rem;
+            overflow: hidden;
             
             &:hover{
                 background: $Project_Lang_A;
             }
             width: 100%;
             >img{
+                margin: .5rem auto;
+                border-radius: .2rem;
                 width: 1.5rem;
                 height: 1.2rem;
                 color: black;
@@ -117,10 +122,11 @@ $radius : 20px;
     
 }
 @include respond-to('medium'){
-    background: orange;
+    background: $Project    ;
     
     >.Title{
-        background:black;
+        color: $Project_H;
+        // background:$Project_H;
     }
     >.Langs{
         display: none;
@@ -130,7 +136,7 @@ $radius : 20px;
         width: auto;
         width: 10rem;
         height: 5rem;
-        display: flex;
+        // display: flex;
         left: 0;
         >#text{
           color: black; 
@@ -177,14 +183,19 @@ $radius : 20px;
 .Projects{
     // background: red;
     @include respond-to('small'){
-        height: 90vh;
+        //    height: 90vh;
+        >h1{
+            display: none;
+        }
     }
     @include respond-to('medium'){
-        display: flex;
-        height: 75vh;
+        // display: flex;
+        // height: 75vh;
     }
     @include respond-to('large'){
         
     }
-
+    // height: 100vh;
+    height: 100vh;
+    // background: red;
 }
