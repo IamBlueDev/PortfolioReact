@@ -1,3 +1,4 @@
+    [![LinkedIn][linkedin-shield]][linkedin-url]
 <br />
 <p align="center">
   <a href="">
@@ -9,7 +10,6 @@
   <p align="center">
     A React portfolio project.
     <br />
-    [![LinkedIn][linkedin-shield]][linkedin-url]
     <br />
     <br />
     <a href="http://tanweerbaig.co.uk/">View Demo</a>
