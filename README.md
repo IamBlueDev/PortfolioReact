@@ -10,10 +10,8 @@
   <p align="center">
     A React portfolio project.
     <br />
-    <p align="center">
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](http://reactjs.com)
-</p>
    <br />
     <br />
     <a href="http://tanweerbaig.co.uk/">View Demo</a>
@@ -21,7 +19,6 @@
     <a href="https://github.com/IamBlueDev/PortfolioReact/issues/new">Report Bug</a>
     
    
-  </p>
 </p>
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
