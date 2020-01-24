@@ -11,8 +11,9 @@
     A React portfolio project.
     <br />
     
-[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/Naereen/)
-    <br />
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](http://reactjs.com)
+
+   <br />
     <br />
     <a href="http://tanweerbaig.co.uk/">View Demo</a>
     ·
