@@ -1,4 +1,4 @@
-[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/Naereen/)
+
 <br />
 <p align="center">
   <a href="">
@@ -10,10 +10,13 @@
   <p align="center">
     A React portfolio project.
     <br />
+    
+[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/Naereen/)
     <br />
     <br />
     <a href="http://tanweerbaig.co.uk/">View Demo</a>
     ·
+    
     <a href="https://github.com/IamBlueDev/PortfolioReact/issues/new">Report Bug</a>
     
    
