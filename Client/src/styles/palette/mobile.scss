@@ -1,16 +1,24 @@
 // ----------------------------------------------------------------------------
 // Mobile Pallete colors
 // ----------------------------------------------------------------------------
-$M_main:grey;//Main mobile color
+$color1:#536976;
+$color2:#292e49;
+$color3:#649173;
+$color4:#DBD5A4;
+$M_main:linear-gradient(to bottom right,$color1,$color2);//Main mobile color
+// $M_Landing_T: black; // Main Mobile text color
+// $M_Landing_T: linear-gradient(to bottom right,white,lightgrey); // Main Mobile text color
+$M_Landing_T: rgba(red,0.1);// Main Mobile text color
+
 // ----------------------------------------------------------------------------
 // Mobile Project Section Pallete
 // ----------------------------------------------------------------------------
 
 $M_Project: rgba(white, 0.2);// Project background color
-$M_Project_T: black;//Project text color
+$M_Project_T: lightgrey;//Project text color
 $M_Project_H: purple;//Project header color
 $M_ProjectSub:transparent; //Project sub divs background.
-$M_Project_Lang_B: rgba(white,0.2);
+$M_Project_Lang_B: rgba($color1,1);
 $M_Project_Lang_A: rgba(grey,0.5);
 $M_Project_Lang_T:black;
 $M_Project_Tag_B: rgba(blue,0.1); // Project Tag Background
@@ -20,14 +28,23 @@ $M_Project_Tag_T:white;//Project Tag text color
 // ----------------------------------------------------------------------------
 // Mobile Social Bar Pallete
 // ----------------------------------------------------------------------------
-$M_Social: rgba(gray, 1);// Social Bar background
+$M_Social:transparent;// Social Bar background
 $M_Social_T: rgba(white, .6   ); // Social Bar Text
-$M_Social_H: rgba(white, 0.1); // Social Item Hover 
-$M_Social_I: rgba(red,.6); //Social Item Color
-
-
-$M_Exp_Bar: rgba(white,.5);
-$M_Exp_Bar_A: rgba(white,.8);
-$M_Exp_Dot: rgba(white,1);
-$M_Exp_Dot_A: rgba(red,1);
+$M_Social_H: rgba(white, 0.5); // Social Item Hover 
+$M_Social_I:linear-gradient(to bottom right,white,lightgrey);
+// $M_Social_I: rgba(red,.6); //Social Item Color
+// ----------------------------------------------------------------------------
+// Mobile Experience Sec Pallete
+// ----------------------------------------------------------------------------
+$M_Exp_Bar: rgba(white,.5); //Timeline bar main color
+$M_Exp_Bar_A: rgba(white,.8); //Timeline bar hover color
+$M_Exp_Dot: rgba(white,1); // Timeline pin point main color
+$M_Exp_Dot_A: rgba(red,1); // Timline pin point hover color
+$M_Exp_E_C: rgba(white,1); // Experience Content Background
+$M_Exp_EC_T: rgba(white,1); // Experience Content Text color
+$M_Exp_EC_D: rgba(white,1);// Experiece Content Date
+$M_Exp_W_C: rgba(white,1);// Work Content Background
+$M_Exp_WC_T: rgba(white,1); // Work Content Text color
+$M_Exp_WC_D: rgba(white,1);// Work Content Date
+$M_Exp_E_T:white;
 

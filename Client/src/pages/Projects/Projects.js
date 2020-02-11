@@ -1,6 +1,7 @@
 import React from 'react';
 import './Projects.scss';
 import placeholder from './../../imgs/coding.png';
+import placeholder2 from './../../imgs/port.png';
 import jsIcon from './../../imgs/Javascript.png';
 import reactIcon from './../../imgs/React.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -13,11 +14,25 @@ class projects extends React.Component{
         "lang":["Javascript","C#"],
         "desc":"This is just a dummy project",
         "tags":["Front End","Back End   "],
+        "icon":placeholder,
         },     
         {"title":"DummyProject#2",
         "lang":["Javascript","C#"],
         "desc":"This is just a dummy project",
         "tags":["Front End","Back End   "],
+        "icon":placeholder2,
+        },
+        {"title":"DummyProject#2",
+        "lang":["Javascript","C#"],
+        "desc":"This is just a dummy project",
+        "tags":["Front End","Back End   "],
+        "icon":placeholder,
+        },
+        {"title":"DummyProject#2",
+        "lang":["Javascript","C#"],
+        "desc":"This is just a dummy project",
+        "tags":["Front End","Back End   "],
+        "icon":placeholder,
         },
     ],
     }
@@ -28,7 +43,7 @@ class projects extends React.Component{
             return(
                 <div className="Project" >
                 <div className="Title" >{item.title}</div>
-                <div className="Icon"><img src={placeholder}/></div>
+                <div className="Icon"><img src={item.icon} alt=""/></div>
                 <div className="Description">{item.desc}</div>
                 <div className="Langs"> 
                 
@@ -49,16 +64,19 @@ class projects extends React.Component{
             )
         })
         return(
-            <div className="Projects">
+            <div className="Content">
+
                 <h1>Starred Projects</h1>
+            <div className="Projects">
                 {dummyProjects}
                 {/* <div className="Title">Projects</div>
                 <div className="item">
-                    <div className="Title"> #1</div>
-                    <div className="Description"></div>
-                    <div className="Langauges"> </div>
-                    <div>tags</div>
-                </div> */}
+                <div className="Title"> #1</div>
+                <div className="Description"></div>
+                <div className="Langauges"> </div>
+                <div>tags</div>
+            </div> */}
+            </div>
 
             </div>
         )

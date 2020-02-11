@@ -8,6 +8,7 @@ class socialBar extends React.Component{
     render(){
         return(
             <div className="Social">
+                <div className="Title"><p>PAGE TITLE</p></div>
                 <li className="Item" id="LinkedIn"><FontAwesomeIcon className="img" icon={faLinkedin}/></li>
                 <li className="Item" id="LinkedIn"><FontAwesomeIcon className="img" icon={faGithub}/></li>
                 <li className="Item" id="LinkedIn"><FontAwesomeIcon className="img" icon={faStackOverflow}/></li>

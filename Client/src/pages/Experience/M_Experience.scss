@@ -1,0 +1,164 @@
+@import './../../styles/base.scss';
+
+.Event{
+    @include respond-to('small'){
+    position: relative;
+    overflow: visible;
+    // background: red;
+&:first-of-type{
+    margin-top: 5rem;
+}
+    >.dot{
+        position: absolute;
+        left: 45vw;
+        content: '...';
+
+        background:$M_Exp_Dot;
+        color: $M_Exp_Dot;
+        border-radius: 100%;
+        width: 2rem;
+        height: 2rem;
+        z-index: 4 ;
+        &:after{
+            display: none;
+            position: absolute;
+            top: 4px;
+            color: $M_Exp_Dot_A;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 100%;
+            left: 4px;
+            content: '.';
+        }
+        &:hover{
+
+            &:after{
+                display: inherit;
+                background: $M_Exp_Dot_A;
+
+            }
+        }
+    }
+    &:hover{
+        >.dot{
+            &:after{
+                display: inherit;
+            background: $M_Exp_Dot_A;
+            }
+        }
+        &:after{
+            background: $M_Exp_Bar_A;
+        }
+    }
+            &:after{
+                background: $M_Exp_Bar;
+                z-index: 0 ;
+                width: 1rem;
+                height: 9.5rem;
+                position: absolute;
+                top: 1rem;
+                left: 47.5vw;
+                border-radius: 1rem 1rem 0 0;
+                content: '';
+            }
+    // background:red;
+    width:100vw;
+    height: 10rem;
+    &.Edu{
+        >.Till{
+            // background: red;
+            float: left;
+            width: 9rem;
+            font-weight: 600;
+            margin: .5rem 0 0 .5rem;
+            color: $M_Exp_E_T;
+        }
+    >.Content{
+        background: $M_Exp_E_C;
+        width: 37vw;
+        height: auto;
+        float: right;
+        border-radius: 1rem;
+        margin-right: .5rem;
+        // margin: 1rem .2rem 0 0 ;
+ 
+        >.Title{
+            background: $M_Exp_EC_T;
+            border-radius: 1rem 1rem 0 0;
+            height: 2rem;
+        }
+        >.Read{
+            // height: 3rem;
+            padding: 1rem;
+            border-radius: 0 0 1rem 1rem;
+            // background: red;
+            // background: red;
+            align-items: baseline;
+        }
+        >.Time{
+            color: $M_Exp_EC_D;
+            padding: .5rem;
+            // background: black;
+        }
+        
+    }
+    }
+    &.Work{
+        >.Till{
+            // background: red;
+            float: right;
+            width: 9rem;
+            font-weight: 600;
+            margin: .5rem 0 0 .5rem;
+            color: $M_Exp_E_T;
+
+        }
+        >.Content{
+            background: $M_Exp_W_C;
+            width: 37vw;
+            height: auto;
+            float: left;
+            border-radius: 1rem;
+            margin-left: .5rem;
+            // margin: 1rem .2rem 0 0 ;
+                >.Title{
+                    background: $M_Exp_WC_T;
+                    border-radius: 1rem 1rem 0 0;
+                    height: 2rem;
+                }
+            >.Read{
+                // height: 3rem;
+                padding: 1rem;
+                border-radius: 0 0 1rem 1rem;
+                // background: red;
+                // background: red;
+                align-items: baseline;
+            }
+            >.Time{
+                color: $M_Exp_WC_D;
+                padding: .5rem;
+                // background: black;
+            }
+            
+        }
+        }
+    &:last-of-type{
+        // background: red;
+        &:after{
+            border-radius: 1rem;
+        }
+    }
+}
+
+
+}
+.Exp{
+    height: 100vh;
+    overflow: hidden;
+    @include respond-to('small'){
+        h1{
+            display: none;
+        }    
+
+    }
+}

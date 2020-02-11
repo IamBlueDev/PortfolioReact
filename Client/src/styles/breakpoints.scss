@@ -2,6 +2,7 @@ $breakpoints:(
 	'small':319px,
 	'medium':601px,
 	'large':1024px,
+	'xlarge':1440px,
  ) !default;
 $testcolor:pink;
 @mixin respond-to($breakpoint) {

@@ -1,0 +1,315 @@
+$radius : 20px;
+@mixin test {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+     -ms-border-radius: $radius;
+         border-radius: $radius;
+         @warn "Changing settings";
+}
+
+@import './../../styles/base.scss';
+.Project{
+    // background: $testcolor;
+@include respond-to('small'){
+
+    position: relative;
+    height: 12rem;
+    // margin: 1rem 0rem 1rem 2.5rem;
+    margin: 1rem auto;
+    width: 15rem;
+    // border:5px solid black;
+    background:$Project;   
+    color: $Project_T;
+    border-radius: 0 1rem 1rem 1rem;
+    box-shadow: -1px 0px 5px 1px rgba(white,0.3);
+    >*{
+        overflow: hidden;
+    }
+
+    >.Title{
+        position: absolute;
+        left: 12rem;
+        top: 5rem;
+        // left: 15rem;s
+        // top: 12rem;
+        transform: rotate(90deg);
+        // color: $Project_H;
+        // background: grey;
+        color:$M_Project_T;
+        &:hover{
+            cursor: pointer;
+            background: $main;
+        }
+    }
+    >.Icon{
+        width: 15rem;
+        height: 8rem;
+        padding-bottom: 5px;
+        >img{
+            // width: 8rem;
+            // height: 8rem;
+            height: auto;
+            width: auto;
+            max-width: 30rem;
+            max-height: 8rem;
+            border-radius: 1rem 1rem 0 0 ;
+
+        }
+    }
+    >.Description{
+        display: none;
+
+    }
+    >.Tags{
+     display: flex;
+     height: 1rem;
+     flex-wrap: wrap;
+     flex-direction: row;
+     &:hover{
+         background: transparent;
+     }
+        >.Tag{
+            // display: inline
+            border-radius: 1rem;
+            width:auto;
+            height: auto;
+            font-size: 8px;
+            background: $Project_Tag_B;
+            color: $Project_Tag_T;
+            margin: auto;
+            padding: 0.5rem;
+            &:hover{
+                background: $Project_Tag_A;
+            }
+            // width: 10rem;
+            // background: red;
+        }
+        background: red;
+        width:75vw;
+        height: auto;
+        // width: 1rem;
+    }
+    >div{
+        // background: $ProjectSub;
+        // &:hover{
+        //     background: pink;
+        // }
+    }
+    >.Langs{
+        position: absolute;
+        top: 0;
+        left: -2.06rem;
+        width: 2rem;
+        height: 12rem;
+        overflow: visible;
+        // background: black;
+        >li{
+            // margin: 0 0rem 0.1rem -0.1rem;
+            // border: 1px solid black;
+            border-left: 1px solid black;
+            // border-radius: 0 0 0rem 1rem ;
+            background: $M_Project_Lang_B;
+            list-style: none;
+            height: 2rem;
+            overflow: hidden;
+            
+            &:hover{
+                background: $M_Project_Lang_A;
+            }
+            width: 100%;
+            >img{
+                margin: .5rem auto;
+                border-radius: .2rem;
+                width: 1.5rem;
+                height: 1.2rem;
+                color: black;
+            }
+        }
+        >li:first-child{
+            border-radius: 1rem 0 0 0 ;
+        }
+        >li:last-child{
+            // background: red;
+            border-radius: 0 0 0rem 1rem ;
+
+        }
+        // display: flex;
+        flex-wrap: wrap;
+    }
+    
+}
+@include respond-to('medium'){
+    background: $Project;
+    
+    >.Title{
+        color: $Project_H;
+        // background:$Project_H;
+        transform: rotate(0deg);
+        top: 25vh;
+        left:7vw;
+    }
+    >.Icon{
+        height: 25vh;
+        width: 20rem;
+        border-radius: 1rem 1rem 0 0;
+        >img{
+            position: absolute;
+            left: 4vw;
+            width: 15vw;
+            height: 20vh;
+        }
+    }
+    >.Tags{
+        >.Tag{
+            background: red;
+            &:hover{
+                color: blue;
+                cursor: pointer;
+                background: transparent;
+            }
+            // padding: auto;
+        }
+        display: flex;
+        flex-direction: row;
+        // margin: 0;
+        position: absolute;
+        bottom: 0.1rem;
+        // background: rgba($color: white, $alpha: .5);
+        border-radius: 0 0 1rem 1rem;
+
+        // margin: 5rem 0 0 0rem;
+        // width: 30vw;
+        // background: red;
+        // background: red;
+        width: 35vw;
+        &:hover{
+            background: rgba($color:white, $alpha: .5);
+        }
+    }
+    >.Langs{
+        display: none;
+        position: relative;
+
+        // background: green;
+        width: auto;
+        width: 10rem;
+        height: 5rem;
+        // display: flex;
+        left: 0;
+        >#text{
+          color: black; 
+          background: green($color: #000000); 
+        }
+    }
+    &:first-of-type{
+        // margin: 5rem 0 0 0;
+        // margin: 5rem 0 0 3rem;
+    }
+    height: 40vh;
+    width: 35vw;
+    // width: 100vws;
+    // margin: 5rem 0rem 0 1rem;    
+    margin: 0 1rem 0 0 ;
+    border-radius: 2rem;
+    // padding: 1rem;
+        // flex:  0 1 80px
+    
+    // overflow: hidden;
+}
+@include respond-to('large'){
+    width: 22vw;
+    >div{
+        color: blue;
+    }
+    >.Title{
+        color: blue;
+        background: red;
+        &:hover{
+            background: pink;
+        }
+    }
+    // margin: 2.3rem;
+    border-radius: 1rem;
+}
+    >.Title{
+        &:hover{
+            cursor: pointer;
+            background: green;
+        }
+    }
+    >.Tags{
+        // width: 20rem;
+        width: 21vw;
+    }
+    color: black;
+
+}
+
+
+//Container for Projects
+.Projects{
+    position: relative;
+    @include respond-to('small'){
+
+    }
+    @include respond-to('medium'){
+        // display: flex;
+        // height: 75vh;
+        >h1{
+            display: inherit;
+            // position: absolute;
+            top: 0;
+            left: 42vw;
+        }
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 90vw;
+        margin: auto;
+        // background: red;
+        >*{
+            margin: auto;
+        }
+        
+    }
+    @include respond-to('large'){
+        >*{
+            // background: red;
+        }
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+    }
+    overflow: hidden;
+
+    // height: 100vh;
+    height: 100vh;
+    // background: red;
+    // width: 100vh;
+}
+.Content{
+    @include respond-to('small'){
+        //    height: 90vh;
+        >h1{
+            display: none;
+        }
+    }
+    @include respond-to('medium'){
+        // display: flex;
+        // height: 75vh;
+        >h1{
+            display: inherit;
+            // margin-left: auto;
+            // margin-right: auto;
+        }
+    }
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    h1{
+        align-self: center;
+        color: white;
+        font-weight: 100;
+        // background: red;
+    }
+}

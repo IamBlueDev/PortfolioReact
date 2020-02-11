@@ -55,9 +55,12 @@ class App extends React.Component{
         {/* hello  */}
         {/* {this.state.windowWidth} */}
         <TopBar/>
+        <div className="R_Content">
+
         <Main /> 
         <Projects/>
         <Experience/>
+        </div>
         <SocialBar/>
       </div>
       </visualContext.Provider>

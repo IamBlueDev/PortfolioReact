@@ -1,0 +1,8 @@
+Card small:
+    position: relative;
+    height: 12rem;
+    // margin: 1rem 0rem 1rem 2.5rem;
+    margin: 1rem auto;
+    width: 15rem;
+
+Card Med:

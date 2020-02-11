@@ -1,0 +1,1 @@
+A portfolio using ExpressJS + Sequelize | React + SCSS 
